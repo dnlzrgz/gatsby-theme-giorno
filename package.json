@@ -1,0 +1,15 @@
+{
+	"private": true,
+	"scripts": {
+		"start": "yarn workspace demo start",
+		"clean": "yarn workspace demo clean",
+		"sanity-start": "yarn workspace sanity start",
+		"theme-start": "yarn workspace gatsby-theme-giorno start",
+		"theme-clean": "yarn workspace gatsby-theme-giorno clean"
+	},
+	"workspaces": [
+		"gatsby-theme-giorno",
+		"sanity",
+		"demo"
+	]
+}
