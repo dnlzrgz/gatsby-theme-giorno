@@ -38,6 +38,10 @@ node_modules/
 
 # Gatsby files
 .cache/
+*/public/
+
+# Sanity
+dist/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
