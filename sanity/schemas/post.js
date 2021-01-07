@@ -27,22 +27,15 @@ export default {
 			to: { type: 'author' },
 		},
 		{
-			name: 'mainImage',
-			title: 'Main image',
-			type: 'mainImage',
-		},
-		{
 			name: 'categories',
 			title: 'Categories',
 			type: 'array',
 			of: [{ type: 'reference', to: { type: 'postCategory' } }],
 		},
 		{
-			name: 'publish',
-			title: 'Published',
-			type: 'boolean',
-			description:
-				'Set to published when the post is ready to be visible on the front-end.',
+			name: 'public',
+			title: 'Public',
+			type: 'published',
 		},
 		{
 			name: 'publishedAt',
@@ -56,11 +49,6 @@ export default {
 			options: {
 				maxLength: 280,
 			},
-		},
-		{
-			name: 'body',
-			title: 'Body',
-			type: 'blockContent',
 		},
 	],
 

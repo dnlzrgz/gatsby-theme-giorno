@@ -21,14 +21,14 @@ export default {
 			},
 		},
 		{
-			name: 'mainImage',
-			title: 'Main image',
-			type: 'mainImage',
+			name: 'public',
+			title: 'Public',
+			type: 'published',
 		},
 		{
-			name: 'pageContent',
-			title: 'Page content',
-			type: 'blockContent',
+			name: 'pageBuilder',
+			type: 'pageBuilder',
+			title: 'Page Builder',
 		},
 	],
 };

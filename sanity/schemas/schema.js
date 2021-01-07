@@ -3,22 +3,24 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Document schemas
 import author from './author';
-import blockContent from './blockContent';
 import externalLink from './externalLink';
-import mainImage from './mainImage';
+import hero from './hero';
 import page from './page';
+import pageBuilder from './pageBuilder';
 import post from './post';
 import postCategory from './postCategory';
+import published from './published';
 
 export default createSchema({
 	name: 'default',
 	types: schemaTypes.concat([
 		author,
-		blockContent,
 		externalLink,
-		mainImage,
+		hero,
 		page,
+		pageBuilder,
 		post,
 		postCategory,
+		published,
 	]),
 });
