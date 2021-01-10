@@ -21,25 +21,7 @@ export default {
 				'Subtitle for the hero, this text will be displayed under the title.',
 		},
 		{
-			name: 'cta',
-			title: 'CTA',
-			type: 'object',
-			description:
-				"Optional CTA that will be rendered as a button under the hero's title.",
-			fields: [
-				{
-					name: 'title',
-					title: 'Message',
-					type: 'string',
-					description: 'CTA message.',
-				},
-				{
-					name: 'url',
-					title: 'URL',
-					type: 'string',
-					description: 'CTA action.',
-				},
-			],
+			type: 'cta',
 		},
 		{
 			name: 'image',
