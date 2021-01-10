@@ -1,9 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import pageBuilder from '../utils/pageBuilder';
+
 const Index = ({ data }) => {
-	console.log(data);
-	return <h1>{data.page.title}</h1>;
+	return (
+		<>
+			{data.page && data.page.pageBuilder && pageBuilder(data.page.pageBuilder)}
+		</>
+	);
 };
 
 export const query = graphql`

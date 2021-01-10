@@ -21,7 +21,10 @@ export default {
 				'Subtitle for the hero, this text will be displayed under the title.',
 		},
 		{
+			name: 'cta',
+			title: 'CTA',
 			type: 'cta',
+			description: 'Call-To-Action button.',
 		},
 		{
 			name: 'image',
