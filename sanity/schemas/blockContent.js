@@ -37,5 +37,6 @@ export default {
 				],
 			},
 		},
+		{ title: 'Code', type: 'code' },
 	],
 };
