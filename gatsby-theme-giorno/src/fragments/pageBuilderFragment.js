@@ -30,20 +30,20 @@ export const query = graphql`
 			... on SanityTextSection {
 				_key
 				_type
-				_rawContent
-				title
 				description
+				title
+				_rawContent
 				content {
+					children {
+						_key
+						_type
+						marks
+						text
+					}
 					_key
 					_type
 					list
 					style
-					children {
-						marks
-						text
-						_type
-						_key
-					}
 				}
 			}
 		}

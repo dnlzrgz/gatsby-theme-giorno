@@ -5,14 +5,17 @@ import SectionDescription from './SectionDescription';
 import ContentBlock from './ContentBlock';
 
 const TextSection = ({ module }) => {
-	const { title, description, content } = module;
+	const { title, description, _rawContent: content } = module;
+
 	return (
 		<section className="h-screen">
 			<header>
 				<SectionTitle>{title}</SectionTitle>
 				{description && <SectionDescription>{description}</SectionDescription>}
 			</header>
-			<ContentBlock content={content} />
+			<main className="flex flex-col items-center justify-items-center">
+				<ContentBlock content={content} />
+			</main>
 		</section>
 	);
 };
