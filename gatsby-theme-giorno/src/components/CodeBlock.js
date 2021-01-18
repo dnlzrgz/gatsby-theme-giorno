@@ -2,10 +2,10 @@ import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dracula as style } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-const CodeBlock = (props) => {
+const CodeBlock = ({ node }) => {
 	return (
-		<SyntaxHighlighter language={props.node.language} style={style}>
-			{props.node.code}
+		<SyntaxHighlighter language={node.language} style={style}>
+			{node.code}
 		</SyntaxHighlighter>
 	);
 };

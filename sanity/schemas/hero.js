@@ -47,7 +47,6 @@ export default {
 		},
 		prepare(selection) {
 			const { title, media, cta } = selection;
-			console.log(cta);
 			return {
 				title: `Hero ${cta?.title ? 'with CTA' : ''}`,
 				subtitle: title,

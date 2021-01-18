@@ -2,6 +2,7 @@ import React from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 
 import CodeBlock from './CodeBlock';
+import ImageBlock from './ImageBlock';
 
 const serializers = {
 	types: {
@@ -14,12 +15,13 @@ const serializers = {
 				case 'blockquote':
 					return null;
 				case 'normal':
-					return <p className="max-w-prose mx-4 my-2">{props.children}</p>;
+					return <p className="max-w-prose px-4 py-2">{props.children}</p>;
 				default:
 					return null;
 			}
 		},
 		code: CodeBlock,
+		image: ImageBlock,
 	},
 };
 
