@@ -1,4 +1,4 @@
-import { GrDocumentText as icon } from 'react-icons/gr';
+import { BsFilePost as icon } from 'react-icons/bs';
 
 export default {
 	name: 'textSection',
@@ -6,20 +6,15 @@ export default {
 	type: 'object',
 	icon,
 	description:
-		'Adds a full-width section with a title, a text description and a block of text.',
+		'Adds a full-width section with a title, a text description and a block of rich text.',
 	fields: [
 		{
 			name: 'title',
-			title: 'Title',
-			type: 'string',
-			description: 'Section title',
-			validation: (Rule) => Rule.required(),
+			type: 'title',
 		},
 		{
 			name: 'description',
-			title: 'Description',
-			type: 'string',
-			description: 'Section description.',
+			type: 'description',
 		},
 		{
 			name: 'content',
@@ -29,9 +24,12 @@ export default {
 		},
 	],
 	preview: {
-		prepare() {
+		select: {
+			title: 'title',
+		},
+		prepare({ title }) {
 			return {
-				title: `Text Section`,
+				title: `Text Section - ${title}`,
 			};
 		},
 	},

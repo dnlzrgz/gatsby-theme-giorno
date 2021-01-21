@@ -11,17 +11,14 @@ export default {
 		{
 			name: 'title',
 			title: 'Title',
-			type: 'string',
-			description:
-				'Text title for the hero, this text will be displayed over the chosen image.',
-			validation: (Rule) => Rule.required(),
+			type: 'title',
+			description: 'Site or project name.',
 		},
 		{
 			name: 'subtitle',
 			title: 'Subtitle',
-			type: 'string',
-			description:
-				'Subtitle for the hero, this text will be displayed under the title.',
+			type: 'description',
+			description: 'Page or site description.',
 		},
 		{
 			name: 'cta',
@@ -45,12 +42,9 @@ export default {
 			media: 'image',
 			cta: 'cta',
 		},
-		prepare(selection) {
-			const { title, media, cta } = selection;
-			console.log(cta);
+		prepare({ title, media, cta }) {
 			return {
-				title: `Hero ${cta?.title ? 'with CTA' : ''}`,
-				subtitle: title,
+				title: `Hero ${cta?.title ? 'with CTA' : ''} - ${title}`,
 				media,
 			};
 		},
