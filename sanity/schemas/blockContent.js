@@ -2,7 +2,7 @@ export default {
 	name: 'blockContent',
 	title: 'Rich text',
 	type: 'array',
-	description: 'Rich text block with references to other documents.',
+	description: 'Rich text block with support for code blocks and images.',
 	of: [
 		{
 			title: 'Block',

@@ -32,6 +32,7 @@ export default {
 			validation: (Rule) => Rule.required(),
 		},
 		{
+			// TODO: use blockContent instead
 			name: 'bio',
 			title: 'Bio',
 			type: 'array',
