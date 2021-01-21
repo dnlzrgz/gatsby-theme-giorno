@@ -37,6 +37,7 @@ export default {
 				],
 			},
 		},
-		{ title: 'Code', type: 'code' },
+		{ type: 'code' },
+		{ type: 'image', options: { hotspot: true } },
 	],
 };
