@@ -11,9 +11,9 @@ export default {
 		},
 		{
 			name: 'href',
-			title: 'URL',
-			type: 'url',
-			description: 'Relative URL to internal page.',
+			title: 'Relative path',
+			type: 'string',
+			description: 'Relative path to internal page.',
 		},
 	],
 };
