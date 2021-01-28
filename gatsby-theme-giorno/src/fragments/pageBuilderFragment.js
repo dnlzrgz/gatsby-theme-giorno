@@ -66,6 +66,39 @@ export const query = graphql`
 					title
 				}
 			}
+			... on SanityForm {
+				_key
+				_type
+				_rawInputs
+				name
+				title
+				inputs {
+					... on SanityInput {
+						_key
+						_type
+						label
+						name
+						placeholder
+						required
+						type
+					}
+					... on SanityTextarea {
+						_key
+						_type
+						label
+						maxLength
+						minLength
+						name
+						placeholder
+						required
+					}
+					... on SanitySubmit {
+						_key
+						_type
+						text
+					}
+				}
+			}
 		}
 	}
 `;
