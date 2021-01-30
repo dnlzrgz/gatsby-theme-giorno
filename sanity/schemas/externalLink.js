@@ -2,6 +2,8 @@ export default {
 	name: 'externalLink',
 	title: 'External link',
 	type: 'object',
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'title',
@@ -9,11 +11,6 @@ export default {
 			type: 'string',
 			required: true,
 			validation: (Rule) => Rule.required(),
-		},
-		{
-			name: 'alt',
-			title: 'Alt text',
-			type: 'string',
 		},
 		{
 			name: 'url',

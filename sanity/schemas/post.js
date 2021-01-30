@@ -5,11 +5,14 @@ export default {
 	title: 'Post',
 	type: 'document',
 	icon,
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'title',
 			title: 'Title',
 			type: 'string',
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			name: 'slug',

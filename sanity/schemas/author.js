@@ -5,6 +5,8 @@ export default {
 	title: 'Author',
 	type: 'document',
 	icon,
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'name',

@@ -2,6 +2,8 @@ export default {
 	name: 'gridItem',
 	title: 'Grid Item',
 	type: 'object',
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'title',

@@ -5,6 +5,8 @@ export default {
 	title: 'Input',
 	type: 'object',
 	icon,
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'name',

@@ -6,6 +6,7 @@ export default {
 	title: 'Form',
 	type: 'object',
 	icon,
+	// TODO:
 	description: '',
 	fields: [
 		{
@@ -27,6 +28,7 @@ export default {
 			name: 'inputs',
 			title: 'Inputs',
 			type: 'array',
+			// TODO:
 			description: '',
 			of: [
 				{ type: 'input' },

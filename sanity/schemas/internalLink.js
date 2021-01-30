@@ -2,6 +2,8 @@ export default {
 	name: 'internalLink',
 	title: 'Internal link',
 	type: 'object',
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'title',

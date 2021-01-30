@@ -17,6 +17,8 @@ import page from './page';
 import pageBuilder from './pageBuilder';
 import post from './post';
 import postCategory from './postCategory';
+import project from './project';
+import projectShowcase from './projectShowcase';
 import published from './published';
 import submit from './submit';
 import textarea from './textarea';
@@ -41,6 +43,8 @@ export default createSchema({
 		pageBuilder,
 		post,
 		postCategory,
+		project,
+		projectShowcase,
 		published,
 		submit,
 		textarea,

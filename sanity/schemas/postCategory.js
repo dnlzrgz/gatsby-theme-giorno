@@ -5,6 +5,8 @@ export default {
 	title: 'Post category',
 	type: 'document',
 	icon,
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'title',

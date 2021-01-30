@@ -5,6 +5,8 @@ export default {
 	title: 'Page',
 	type: 'document',
 	icon,
+	// TODO:
+	description: '',
 	fields: [
 		{
 			name: 'title',
