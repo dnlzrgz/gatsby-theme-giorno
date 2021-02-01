@@ -15,10 +15,10 @@ export default {
 			description: '',
 		},
 		{
-			name: 'subtitle',
-			title: 'Subtitle',
+			name: 'description',
+			title: 'Description',
 			type: 'description',
-			description: 'Page or site description.',
+			description: 'Section description.',
 		},
 		{
 			name: 'projects',

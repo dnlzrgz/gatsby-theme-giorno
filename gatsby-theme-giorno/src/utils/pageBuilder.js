@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
+import ProjectShowcase from '../components/ProjectShowcase';
 import Form from '../components/Form';
 
 const pageBuilder = (modules) => {
@@ -16,8 +17,10 @@ const pageBuilder = (modules) => {
 				return <GridSection key={module._key} module={module} />;
 			case 'form':
 				return <Form key={module._key} module={module} />;
+			case 'projectShowcase':
+				return <ProjectShowcase key={module._key} module={module} />;
 			default:
-				console.warning('Unknown Sanity module', module);
+				console.error('Unknown Sanity module', module);
 				return null;
 		}
 	});

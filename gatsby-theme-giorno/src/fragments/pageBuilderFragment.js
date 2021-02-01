@@ -66,6 +66,36 @@ export const query = graphql`
 					title
 				}
 			}
+			... on SanityProjectShowcase {
+				_key
+				_type
+				title
+				description
+				projects {
+					name
+					description
+					_rawImage
+					url {
+						_type
+						url
+						title
+					}
+					slug {
+						current
+					}
+					image {
+						_type
+						asset {
+							fixed {
+								...GatsbySanityImageFixed
+							}
+							fluid {
+								...GatsbySanityImageFluid
+							}
+						}
+					}
+				}
+			}
 			... on SanityForm {
 				_key
 				_type

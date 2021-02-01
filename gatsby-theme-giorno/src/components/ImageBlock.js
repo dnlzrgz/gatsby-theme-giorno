@@ -5,7 +5,7 @@ import { getFluidGatsbyImage } from 'gatsby-source-sanity';
 import clientConfig from '../utils/clientConfig';
 
 const ImageBlock = ({ node }) => {
-	if (!node.asset) return null;
+	if (!node || !node.asset || !node.asset._ref) return null;
 
 	const fluid = getFluidGatsbyImage(node.asset._ref, {}, clientConfig.sanity);
 	return <Img fluid={fluid} />;
