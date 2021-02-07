@@ -5,8 +5,6 @@ export default {
 	title: 'Hero',
 	type: 'object',
 	icon,
-	description:
-		'Adds a full-width oversized banner at the top of the page with a title.',
 	fields: [
 		{
 			name: 'title',

@@ -2,7 +2,7 @@ export default {
 	name: 'cta',
 	title: 'CTA',
 	type: 'object',
-	description: 'Call-To-Action.',
+	description: 'A Call-To-Action.',
 	fields: [
 		{
 			name: 'title',

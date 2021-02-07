@@ -5,8 +5,6 @@ export default {
 	title: 'Project',
 	type: 'document',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'name',

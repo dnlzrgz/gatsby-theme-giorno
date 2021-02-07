@@ -5,8 +5,6 @@ export default {
 	title: 'Post',
 	type: 'document',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'title',

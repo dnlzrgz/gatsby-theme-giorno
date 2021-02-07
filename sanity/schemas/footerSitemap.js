@@ -5,15 +5,13 @@ export default {
 	title: 'Sitemap',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'enable',
 			title: 'Enable',
 			type: 'boolean',
-			// TODO:
-			description: '',
+			description:
+				'Displays a footer section with links to all the main public pages of your site.',
 		},
 	],
 	preview: {

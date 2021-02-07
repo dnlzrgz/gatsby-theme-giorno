@@ -5,16 +5,13 @@ export default {
 	title: 'Copyright',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'copy',
 			title: 'Copyright message',
 			type: 'string',
 			validation: (Rule) => Rule.required(),
-			// TODO:
-			description: '',
+			description: 'Copyright message or information.',
 		},
 	],
 	preview: {

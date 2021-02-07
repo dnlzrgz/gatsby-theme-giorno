@@ -5,8 +5,6 @@ export default {
 	title: 'Text Section',
 	type: 'object',
 	icon,
-	description:
-		'Adds a full-width section with a title, a text description and a block of rich text.',
 	fields: [
 		{
 			name: 'title',

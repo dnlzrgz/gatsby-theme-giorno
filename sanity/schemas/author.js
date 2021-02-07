@@ -5,8 +5,7 @@ export default {
 	title: 'Author',
 	type: 'document',
 	icon,
-	// TODO:
-	description: '',
+	description: 'Post author.',
 	fields: [
 		{
 			name: 'name',
@@ -34,18 +33,9 @@ export default {
 			validation: (Rule) => Rule.required(),
 		},
 		{
-			// TODO: use blockContent instead
 			name: 'bio',
 			title: 'Bio',
-			type: 'array',
-			of: [
-				{
-					title: 'Block',
-					type: 'block',
-					styles: [{ title: 'Normal', value: 'normal' }],
-					lists: [],
-				},
-			],
+			type: 'blockContent',
 			validation: (Rule) => Rule.required(),
 		},
 		{

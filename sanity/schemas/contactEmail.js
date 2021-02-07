@@ -5,12 +5,12 @@ export default {
 	title: 'Email',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
+	description: 'An optional contact email.',
 	fields: [
 		{
 			name: 'title',
 			type: 'title',
+			description: 'Contact option title (for example: My email).',
 		},
 		{
 			name: 'email',

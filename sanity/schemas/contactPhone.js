@@ -5,27 +5,25 @@ export default {
 	title: 'Phone number',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
+	description: 'An optional contact phone number.',
 	fields: [
 		{
 			name: 'title',
 			type: 'title',
+			description: 'Contact option title (for example: My phone number)',
 		},
 		{
 			name: 'prefix',
 			title: 'Country prefix',
 			type: 'string',
-			// TODO:
-			description: '',
+			description:
+				'Your country calling code or phone prefix (for example: +34)',
 			validation: (Rule) => Rule.required(),
 		},
 		{
 			name: 'phone',
 			title: 'Phone number',
 			type: 'string',
-			// TODO:
-			description: '',
 			validation: (Rule) => Rule.required(),
 		},
 	],

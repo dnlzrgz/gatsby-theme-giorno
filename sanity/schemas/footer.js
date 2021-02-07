@@ -5,16 +5,12 @@ export default {
 	title: 'Footer',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
-	// TODO: Add preview
+	description: 'A footer section with optional components.',
 	fields: [
 		{
 			name: 'sections',
 			title: 'Footer sections',
 			type: 'array',
-			// TODO:
-			description: '',
 			of: [
 				{ type: 'footerContact' },
 				{ type: 'footerCopyright' },

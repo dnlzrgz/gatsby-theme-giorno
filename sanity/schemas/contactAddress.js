@@ -5,19 +5,17 @@ export default {
 	title: 'Contact address',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
+	description: 'An optional physical address.',
 	fields: [
 		{
 			name: 'title',
 			type: 'title',
+			description: 'Contact option title (for example: My address).',
 		},
 		{
 			name: 'address',
 			title: 'Address',
 			type: 'string',
-			// TODO:
-			description: '',
 			validation: (Rule) => Rule.required(),
 		},
 	],

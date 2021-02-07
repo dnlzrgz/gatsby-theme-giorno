@@ -2,8 +2,7 @@ export default {
 	name: 'externalLink',
 	title: 'External link',
 	type: 'object',
-	// TODO:
-	description: '',
+	description: 'A link to an external site.',
 	fields: [
 		{
 			name: 'title',

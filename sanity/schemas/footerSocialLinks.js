@@ -5,8 +5,6 @@ export default {
 	title: 'Social links',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'title',
@@ -26,6 +24,8 @@ export default {
 						{
 							name: 'title',
 							type: 'title',
+							description:
+								'Social network or external site name (for example: Instagram).',
 						},
 						{
 							name: 'url',

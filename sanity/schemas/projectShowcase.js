@@ -5,8 +5,6 @@ export default {
 	title: 'Project showcase',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'title',

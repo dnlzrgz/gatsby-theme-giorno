@@ -5,8 +5,6 @@ export default {
 	title: 'Grid Section',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'title',

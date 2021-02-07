@@ -5,8 +5,6 @@ export default {
 	title: 'Textarea',
 	type: 'object',
 	icon,
-	// TODO:
-	description: '',
 	fields: [
 		{
 			name: 'name',
