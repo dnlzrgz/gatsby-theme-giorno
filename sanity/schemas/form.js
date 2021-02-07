@@ -33,7 +33,7 @@ export default {
 			of: [
 				{ type: 'input' },
 				{ type: 'textarea' },
-				{ type: 'submit', validation: (Rule) => Rule.required().unique() },
+				{ type: 'submit', validation: (Rule) => Rule.required() },
 			],
 		},
 	],

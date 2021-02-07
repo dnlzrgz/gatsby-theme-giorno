@@ -4,9 +4,18 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // Document schemas
 import author from './author';
 import blockContent from './blockContent';
+import contactAddress from './contactAddress';
+import contactEmail from './contactEmail';
+import contactPhone from './contactPhone';
 import cta from './cta';
 import description from './description';
 import externalLink from './externalLink';
+import footer from './footer';
+import footerContact from './footerContact';
+import footerCopyright from './footerCopyright';
+import footerCTA from './footerCTA';
+import footerSitemap from './footerSitemap';
+import footerSocialLinks from './footerSocialLinks';
 import form from './form';
 import gridItem from './gridItem';
 import gridSection from './gridSection';
@@ -30,9 +39,18 @@ export default createSchema({
 	types: schemaTypes.concat([
 		author,
 		blockContent,
+		contactAddress,
+		contactEmail,
+		contactPhone,
 		cta,
 		description,
 		externalLink,
+		footer,
+		footerContact,
+		footerCopyright,
+		footerCTA,
+		footerSitemap,
+		footerSocialLinks,
 		form,
 		gridItem,
 		gridSection,

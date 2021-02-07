@@ -5,10 +5,11 @@ export default {
 	// TODO:
 	description: '',
 	of: [
-		{ type: 'hero' },
-		{ type: 'textSection' },
-		{ type: 'gridSection' },
+		{ type: 'footer' },
 		{ type: 'form' },
+		{ type: 'gridSection' },
+		{ type: 'hero' },
 		{ type: 'projectShowcase' },
+		{ type: 'textSection' },
 	],
 };
