@@ -1,3 +1,4 @@
+// TODO: add icon
 export default {
 	name: 'cta',
 	title: 'CTA',

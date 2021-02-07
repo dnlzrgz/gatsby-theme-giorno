@@ -14,7 +14,7 @@ export default {
 			of: [
 				{ type: 'footerContact' },
 				{ type: 'footerCopyright' },
-				{ type: 'footerCTA' },
+				{ type: 'cta' },
 				{ type: 'footerSitemap' },
 				{ type: 'footerSocialLinks' },
 			],

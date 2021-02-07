@@ -13,7 +13,6 @@ import externalLink from './externalLink';
 import footer from './footer';
 import footerContact from './footerContact';
 import footerCopyright from './footerCopyright';
-import footerCTA from './footerCTA';
 import footerSitemap from './footerSitemap';
 import footerSocialLinks from './footerSocialLinks';
 import form from './form';
@@ -48,7 +47,6 @@ export default createSchema({
 		footer,
 		footerContact,
 		footerCopyright,
-		footerCTA,
 		footerSitemap,
 		footerSocialLinks,
 		form,
