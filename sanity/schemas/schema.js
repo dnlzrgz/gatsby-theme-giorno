@@ -3,6 +3,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import author from './author';
 import blockContent from './blockContent';
+import blockSection from './blockSection';
 import contactAddress from './contactAddress';
 import contactEmail from './contactEmail';
 import contactPhone from './contactPhone';
@@ -30,7 +31,6 @@ import projectShowcase from './projectShowcase';
 import published from './published';
 import submit from './submit';
 import textarea from './textarea';
-import textSection from './textSection';
 import title from './title';
 
 export default createSchema({
@@ -38,6 +38,7 @@ export default createSchema({
 	types: schemaTypes.concat([
 		author,
 		blockContent,
+		blockSection,
 		contactAddress,
 		contactEmail,
 		contactPhone,
@@ -65,7 +66,6 @@ export default createSchema({
 		published,
 		submit,
 		textarea,
-		textSection,
 		title,
 	]),
 });

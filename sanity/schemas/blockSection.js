@@ -1,8 +1,8 @@
 import { BsFilePost as icon } from 'react-icons/bs';
 
 export default {
-	name: 'textSection',
-	title: 'Text Section',
+	name: 'blockSection',
+	title: 'Block Section',
 	type: 'object',
 	icon,
 	fields: [
