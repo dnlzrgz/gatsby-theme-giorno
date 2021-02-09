@@ -7,6 +7,7 @@ export default {
 	icon,
 	description: 'A footer section with optional components.',
 	fields: [
+		{ name: 'cta', type: 'cta' },
 		{
 			name: 'sections',
 			title: 'Footer sections',
@@ -14,7 +15,6 @@ export default {
 			of: [
 				{ type: 'footerContact' },
 				{ type: 'footerCopyright' },
-				{ type: 'cta' },
 				{ type: 'footerSitemap' },
 				{ type: 'footerSocialLinks' },
 			],

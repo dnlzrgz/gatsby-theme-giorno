@@ -5,7 +5,9 @@ import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
 import ProjectShowcase from '../components/ProjectShowcase';
 import Form from '../components/Form';
+import Footer from '../components/Footer';
 
+// TODO: refactor pageBuilder and other builders into a single constructor function
 const pageBuilder = (modules) => {
 	return modules.map((module) => {
 		switch (module._type) {
@@ -19,8 +21,10 @@ const pageBuilder = (modules) => {
 				return <Form key={module._key} module={module} />;
 			case 'projectShowcase':
 				return <ProjectShowcase key={module._key} module={module} />;
+			case 'footer':
+				return <Footer key={module._key} module={module} />;
 			default:
-				console.error('Unknown Sanity module', module);
+				console.warn('Unknown Sanity module', module);
 				return null;
 		}
 	});
