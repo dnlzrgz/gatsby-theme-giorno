@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FormTextarea = ({ input, register }) => {
-	const { name, label, maxLength, minLength, required, placeholder } = input;
+const FormTextarea = ({ module, register }) => {
+	const { name, label, maxLength, minLength, required, placeholder } = module;
 
 	return (
 		<label key={name} htmlFor={name} className="flex flex-col">

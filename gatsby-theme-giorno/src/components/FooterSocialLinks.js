@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FooterSocialLinks = ({ section }) => {
-	const { title, links } = section;
+const FooterSocialLinks = ({ module }) => {
+	const { title, links } = module;
 
 	return (
 		<section>

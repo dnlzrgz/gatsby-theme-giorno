@@ -4,11 +4,7 @@ import { graphql } from 'gatsby';
 import pageBuilder from '../utils/pageBuilder';
 
 const Index = ({ data }) => {
-	return (
-		<>
-			{data.page && data.page.pageBuilder && pageBuilder(data.page.pageBuilder)}
-		</>
-	);
+	return <>{pageBuilder(data.page.pageBuilder)}</>;
 };
 
 export const query = graphql`

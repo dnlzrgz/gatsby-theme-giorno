@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FooterSitemap = ({ section }) => {
-	const { enable } = section;
+const FooterSitemap = ({ module }) => {
+	const { enable } = module;
 
 	if (!enable) return null;
 	return (
