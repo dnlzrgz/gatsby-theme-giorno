@@ -3,8 +3,6 @@ import React from 'react';
 const FormInput = ({ module, register }) => {
 	const { name, label, type, required, placeholder } = module;
 
-	console.log(module);
-
 	return (
 		<label key={name} htmlFor={name} className="flex flex-col">
 			{label}
