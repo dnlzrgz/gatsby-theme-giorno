@@ -1,25 +1,10 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
+
+import useAllPages from '../hooks/use-all-pages';
 
 const Nav = () => {
-	const data = useStaticQuery(graphql`
-		query MyQuery {
-			pages: allSanityPage(
-				filter: { public: { eq: true }, slug: { current: { ne: "index" } } }
-			) {
-				nodes {
-					slug {
-						current
-					}
-					title
-					id
-					public
-				}
-			}
-		}
-	`);
-
-	const pages = data.pages.nodes;
+	const pages = useAllPages();
 
 	return (
 		<nav className="shadow py-4 px-7 w-full h-auto bg-white fixed grid grid-cols-2 grid-rows-1 z-50">

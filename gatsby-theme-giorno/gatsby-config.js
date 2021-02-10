@@ -4,6 +4,9 @@ require('dotenv').config({
 });
 
 module.exports = {
+	siteMetadata: {
+		siteUrl: `https://giorno-demo.netlify.app`,
+	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-postcss',
@@ -17,5 +20,6 @@ module.exports = {
 				overlayDrafts: true,
 			},
 		},
+		`gatsby-plugin-sitemap`,
 	],
 };
