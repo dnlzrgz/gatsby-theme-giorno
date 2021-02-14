@@ -7,8 +7,6 @@ const FooterSitemap = ({ module }) => {
 	const { enable } = module;
 	const pages = useAllPages();
 
-	console.log(pages);
-
 	if (!enable) return null;
 	return (
 		<section>
