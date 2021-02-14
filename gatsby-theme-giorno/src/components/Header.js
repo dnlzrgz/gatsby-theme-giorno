@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 
 import useAllPages from '../hooks/use-all-pages';
 import Nav from './Nav';
@@ -21,10 +20,13 @@ const Header = () => {
 						setOpen(!open);
 					}}
 				/>
+				<div className="hidden md:flex gap-5 p-1">
+					<NavMenuList pages={pages} />
+				</div>
 			</Nav>
 
 			{open ? (
-				<div className="flex flex-col my-3 text-lg text-center z-10">
+				<div className="md:hidden flex flex-col my-3 text-lg text-center z-10">
 					<NavMenuList pages={pages} />
 				</div>
 			) : null}

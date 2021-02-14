@@ -4,7 +4,11 @@ import { MenuIcon, CloseMenuIcon } from './icons';
 
 const NavMenuButton = ({ open, handleClick }) => {
 	return (
-		<button type="button" className="text-black-700 p-1" onClick={handleClick}>
+		<button
+			type="button"
+			className="md:hidden text-black-700 p-1"
+			onClick={handleClick}
+		>
 			{!open ? <MenuIcon /> : <CloseMenuIcon />}
 		</button>
 	);

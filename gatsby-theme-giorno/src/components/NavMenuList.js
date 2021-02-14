@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const NavMenuList = ({ pages }) => {
 	return (
-		<ul>
+		<ul role="menu">
 			{pages.map((page) => {
 				if (!page.public) return null;
 
