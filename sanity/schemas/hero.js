@@ -13,6 +13,13 @@ export default {
 			description: 'Site or project name.',
 		},
 		{
+			name: 'whiteText',
+			title: 'White text color',
+			type: 'boolean',
+			description:
+				'By default the text color is black, but if you have an image with a dark background you may want to change it to white.',
+		},
+		{
 			name: 'subtitle',
 			title: 'Subtitle',
 			type: 'description',
