@@ -11,7 +11,7 @@ const Header = () => {
 	const pages = useAllPages();
 
 	return (
-		<header className="w-full bg-white shadow fixed z-10">
+		<header className="w-full bg-white shadow fixed z-50">
 			<Nav>
 				<NavHomeLink>Giorno</NavHomeLink>
 				<NavMenuButton

@@ -1,20 +1,28 @@
 import React from 'react';
 
 import HeroImage from './HeroImage';
-import HeroContent from './HeroContent';
-import CTA from './cta';
+import HeroTitle from './HeroTitle';
+import HeroSubtitle from './HeroSubtitle';
+import CTA from './CTA';
 
 const Hero = ({ module }) => {
+	const { title, subtitle, whiteText, image, cta } = module;
+
 	return (
-		<div className="flex relative items-center">
-			<HeroImage fluidAsset={module.image.asset.fluid} />
-			<div className="absolute w-full px-7">
-				<HeroContent title={module.title} subtitle={module.subtitle} />
-				{module.cta && module.cta.title && module.cta.url ? (
-					<CTA title={module.cta.title} url={module.cta.url} />
-				) : null}
-			</div>
-		</div>
+		<section className="grid grid-rows-1 grid-cols-1 items-center">
+			<header
+				className={`${whiteText ? 'text-white' : ''} z-10`}
+				style={{ gridArea: '1/1' }}
+			>
+				<HeroTitle>{title}</HeroTitle>
+				{subtitle ? <HeroSubtitle>{subtitle}</HeroSubtitle> : null}
+				{cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}
+			</header>
+
+			<main style={{ gridArea: '1/1' }}>
+				<HeroImage fluidAsset={image.asset.fluid} />
+			</main>
+		</section>
 	);
 };
 

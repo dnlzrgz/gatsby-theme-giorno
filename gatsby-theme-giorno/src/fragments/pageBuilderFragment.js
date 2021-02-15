@@ -6,6 +6,9 @@ export const query = graphql`
 			... on SanityHero {
 				_key
 				_type
+				title
+				subtitle
+				whiteText
 				cta {
 					title
 					url
@@ -24,14 +27,12 @@ export const query = graphql`
 						url
 					}
 				}
-				subtitle
-				title
 			}
 			... on SanityBlockSection {
 				_key
 				_type
-				description
 				title
+				description
 				_rawContent
 				content {
 					children {
