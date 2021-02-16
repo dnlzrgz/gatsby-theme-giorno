@@ -4,7 +4,6 @@ export default {
 	type: 'array',
 	of: [
 		{ type: 'blockSection' },
-		{ type: 'footer' },
 		{ type: 'form' },
 		{ type: 'gridSection' },
 		{ type: 'hero' },

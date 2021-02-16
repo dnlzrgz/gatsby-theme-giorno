@@ -1,8 +1,10 @@
+import { BsLink45Deg as icon } from 'react-icons/bs';
+
 export default {
-	name: 'externalLink',
-	title: 'External link',
-	type: 'object',
-	description: 'A link to an external site.',
+	name: 'externalLinks',
+	title: 'External links',
+	type: 'document',
+	icon,
 	fields: [
 		{
 			name: 'title',
