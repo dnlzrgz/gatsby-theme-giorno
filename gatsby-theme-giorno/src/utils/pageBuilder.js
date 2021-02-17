@@ -4,7 +4,6 @@ import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
 import ProjectShowcase from '../components/ProjectShowcase';
 import Form from '../components/Form';
-import Footer from '../components/Footer';
 
 const pageSerializer = new Map([
 	['hero', Hero],
@@ -12,7 +11,6 @@ const pageSerializer = new Map([
 	['gridSection', GridSection],
 	['form', Form],
 	['projectShowcase', ProjectShowcase],
-	['footer', Footer],
 ]);
 
 const pageBuilder = (modules) => builder(pageSerializer, modules);

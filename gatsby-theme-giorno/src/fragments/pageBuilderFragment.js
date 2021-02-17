@@ -130,64 +130,6 @@ export const query = graphql`
 					}
 				}
 			}
-			... on SanityFooter {
-				_key
-				_type
-				cta {
-					_type
-					title
-					url
-				}
-				sections {
-					... on SanityFooterContact {
-						_key
-						_type
-						_rawOption
-						option {
-							... on SanityContactAddress {
-								_key
-								_type
-								address
-								title
-							}
-							... on SanityContactEmail {
-								_key
-								_type
-								email
-								title
-							}
-							... on SanityContactPhone {
-								_key
-								_type
-								phone
-								prefix
-								title
-							}
-						}
-					}
-					... on SanityFooterCopyright {
-						_key
-						_type
-						copy
-					}
-					... on SanityFooterSitemap {
-						_key
-						_type
-						enable
-					}
-					... on SanityFooterSocialLinks {
-						_key
-						_type
-						title
-						links {
-							_key
-							_type
-							title
-							url
-						}
-					}
-				}
-			}
 		}
 	}
 `;
