@@ -2,15 +2,15 @@ import React from 'react';
 
 import footerContactBuilder from '../utils/footerContactBuilder';
 
-const FooterContact = ({ module }) => {
-	const { option: options } = module;
-
+const FooterContact = ({ details }) => {
+	const { title, description, option } = details;
 	return (
 		<section>
-			<header>
-				<h2>Contact info</h2>
+			<header className="text-lg font-semibold">
+				<h2>{title}</h2>
+				{description ? <p>{description}</p> : null}
 			</header>
-			<main>{footerContactBuilder(options)}</main>
+			<main>{footerContactBuilder(option)}</main>
 		</section>
 	);
 };

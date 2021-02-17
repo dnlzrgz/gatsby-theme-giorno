@@ -1,16 +1,18 @@
 import React from 'react';
 
-const FooterSocialLinks = ({ module }) => {
-	const { title, links } = module;
-
+const FooterSocialLinks = ({ links }) => {
 	return (
 		<section>
-			<header>
-				<h2>{title}</h2>
+			<header className="text-lg font-semibold">
+				<h2>Social links</h2>
 			</header>
-			<main className="flex flex-col">
-				{links.map((link) => {
-					return <a href={link.url}>{link.title}</a>;
+			<main className="flex flex-col gap-1">
+				{links.map(({ node }) => {
+					return (
+						<a key={node.id} href={node.url}>
+							{node.title}
+						</a>
+					);
 				})}
 			</main>
 		</section>

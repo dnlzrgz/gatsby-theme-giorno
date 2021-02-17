@@ -3,14 +3,12 @@ import { Link } from 'gatsby';
 
 import useAllPages from '../hooks/use-all-pages';
 
-const FooterSitemap = ({ module }) => {
-	const { enable } = module;
+const FooterSitemap = () => {
 	const pages = useAllPages();
 
-	if (!enable) return null;
 	return (
 		<section>
-			<header>
+			<header className="text-lg font-semibold">
 				{/* TODO: Add icon */}
 				<Link to="/sitemap.xml">
 					<h2>Sitemap</h2>

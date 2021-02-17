@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FooterCopyright = ({ module }) => {
+const FooterCopyright = ({ copy }) => {
 	return (
 		<section>
-			<main>
-				<p>{module.copy}</p>
+			<main className="text-center px-12">
+				<p>Copyright &copy; - {copy}</p>
 			</main>
 		</section>
 	);
