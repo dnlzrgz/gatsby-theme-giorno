@@ -1,11 +1,7 @@
-import { BsInfoCircle as icon } from 'react-icons/bs';
-
-// TODO: fix icon on dashboard
 export default {
 	name: 'config',
 	title: 'Config',
 	type: 'document',
-	icon,
 	__experimental_actions: ['create', 'update', 'publish'],
 	fields: [
 		{
