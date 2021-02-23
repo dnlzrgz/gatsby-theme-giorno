@@ -1,8 +1,8 @@
 import React from 'react';
 
-import HeroImage from './HeroImage';
 import HeroTitle from './HeroTitle';
 import HeroSubtitle from './HeroSubtitle';
+import HeroImage from './HeroImage';
 import CTA from './CTA';
 
 const Hero = ({ module }) => {
@@ -11,7 +11,7 @@ const Hero = ({ module }) => {
 	return (
 		<section className="grid grid-rows-1 grid-cols-1 items-center">
 			<header
-				className={`${whiteText ? 'text-white' : ''} z-10`}
+				className={`${whiteText ? 'text-white' : 'text-gray-900'} z-10`}
 				style={{ gridArea: '1/1' }}
 			>
 				<HeroTitle>{title}</HeroTitle>

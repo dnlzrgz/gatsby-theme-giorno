@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HeroTitle = ({ white, children }) => {
+const HeroTitle = ({ children }) => {
 	return <h1 className="text-6xl md:text-8xl text-center mb-4">{children}</h1>;
 };
 
