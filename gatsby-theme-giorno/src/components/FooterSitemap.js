@@ -6,6 +6,7 @@ import useAllPages from '../hooks/use-all-pages';
 const FooterSitemap = () => {
 	const pages = useAllPages();
 
+	if (!pages.length) return null;
 	return (
 		<section>
 			<header className="text-lg font-semibold">
