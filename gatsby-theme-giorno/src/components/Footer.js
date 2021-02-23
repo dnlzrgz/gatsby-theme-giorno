@@ -14,7 +14,7 @@ const Footer = () => {
 	const contact = useSanityContactOptions();
 
 	return (
-		<footer className="text-white bg-gray-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-6 px-6">
+		<footer className="text-white bg-gray-700 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-16 px-6 md:px-12">
 			{links && links.length !== 0 ? <FooterSocialLinks links={links} /> : null}
 			{contact && contact.title ? <FooterContact details={contact} /> : null}
 			{sitemap ? <FooterSitemap /> : null}
