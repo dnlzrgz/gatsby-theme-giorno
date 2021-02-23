@@ -10,6 +10,7 @@ const Header = () => {
 	const [open, setOpen] = useState(false);
 	const pages = useAllPages();
 
+	if (!pages.length) return null;
 	return (
 		<header className="w-full bg-white shadow fixed z-50">
 			<Nav>
@@ -20,13 +21,13 @@ const Header = () => {
 						setOpen(!open);
 					}}
 				/>
-				<div className="hidden md:flex gap-5 p-1">
+				<div className="hidden md:block p-1">
 					<NavMenuList pages={pages} />
 				</div>
 			</Nav>
 
 			{open ? (
-				<div className="md:hidden flex flex-col my-3 text-lg text-center z-10">
+				<div className="md:hidden text-lg text-center z-10">
 					<NavMenuList pages={pages} />
 				</div>
 			) : null}
