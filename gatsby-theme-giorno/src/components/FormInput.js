@@ -4,10 +4,12 @@ const FormInput = ({ module, register }) => {
 	const { name, label, type, required, placeholder } = module;
 
 	return (
-		<label key={name} htmlFor={name} className="flex flex-col">
-			{label}
+		<div className="flex flex-col gap-3">
+			<label key={name} htmlFor={name} className="text-lg">
+				{label}
+			</label>
 			<input
-				className="border px-2 py-3"
+				className="border rounded-md px-3 py-3"
 				name={name}
 				id={name}
 				type={type}
@@ -15,7 +17,7 @@ const FormInput = ({ module, register }) => {
 				placeholder={placeholder}
 				ref={register}
 			/>
-		</label>
+		</div>
 	);
 };
 

@@ -4,8 +4,10 @@ const FormTextarea = ({ module, register }) => {
 	const { name, label, maxLength, minLength, required, placeholder } = module;
 
 	return (
-		<label key={name} htmlFor={name} className="flex flex-col">
-			{label}
+		<div className="flex flex-col gap-3">
+			<label key={name} htmlFor={name} className="text-lg">
+				{label}
+			</label>
 			<textarea
 				name={name}
 				id={name}
@@ -14,8 +16,9 @@ const FormTextarea = ({ module, register }) => {
 				placeholder={placeholder}
 				required={required}
 				ref={register}
+				className="h-36 border px-2 py-3"
 			/>
-		</label>
+		</div>
 	);
 };
 
