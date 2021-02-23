@@ -41,11 +41,5 @@ export default {
 			},
 			validation: (Rule) => Rule.required(),
 		},
-		{
-			name: 'url',
-			title: 'Project URL',
-			type: 'externalLink',
-			description: 'External link to project repository or webpage.',
-		},
 	],
 };
