@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Section from './Section';
 import SectionTitle from './SectionTitle';
 import SectionDescription from './SectionDescription';
 import ContentBlock from './ContentBlock';
@@ -8,7 +9,7 @@ const TextSection = ({ module }) => {
 	const { title, description, _rawContent: content } = module;
 
 	return (
-		<section className="h-screen">
+		<Section>
 			<header>
 				<SectionTitle>{title}</SectionTitle>
 				{description && <SectionDescription>{description}</SectionDescription>}
@@ -16,7 +17,7 @@ const TextSection = ({ module }) => {
 			<main className="flex flex-col items-center justify-items-center">
 				<ContentBlock content={content} />
 			</main>
-		</section>
+		</Section>
 	);
 };
 

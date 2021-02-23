@@ -2,15 +2,15 @@ import builder from './builder';
 import Hero from '../components/Hero';
 import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
-import ProjectShowcase from '../components/ProjectShowcase';
-import Form from '../components/Form';
+import ProjectsSection from '../components/ProjectsSection';
+import FormSection from '../components/FormSection';
 
 const pageSerializer = new Map([
 	['hero', Hero],
 	['textSection', TextSection],
 	['gridSection', GridSection],
-	['form', Form],
-	['projectShowcase', ProjectShowcase],
+	['form', FormSection],
+	['projectShowcase', ProjectsSection],
 ]);
 
 const pageBuilder = (modules) => builder(pageSerializer, modules);
