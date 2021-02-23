@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SectionDescription = ({ children }) => {
-	return <p className="text-center text-lg px-4 mb-5">{children}</p>;
+	return <p className="text-lg md:text-2xl">{children}</p>;
 };
 
 export default SectionDescription;
