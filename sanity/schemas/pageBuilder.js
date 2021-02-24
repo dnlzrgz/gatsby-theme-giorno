@@ -3,10 +3,11 @@ export default {
 	title: 'Page builder',
 	type: 'array',
 	of: [
+		{ type: 'blankHero' },
+		{ type: 'hero' },
+		{ type: 'gridSection' },
+		{ type: 'projectShowcase' },
 		{ type: 'blockSection' },
 		{ type: 'form' },
-		{ type: 'gridSection' },
-		{ type: 'hero' },
-		{ type: 'projectShowcase' },
 	],
 };

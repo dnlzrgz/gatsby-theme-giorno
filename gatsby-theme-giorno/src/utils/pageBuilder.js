@@ -1,4 +1,5 @@
 import builder from './builder';
+import BlankHero from '../components/BlankHero';
 import Hero from '../components/Hero';
 import TextSection from '../components/TextSection';
 import GridSection from '../components/GridSection';
@@ -6,6 +7,7 @@ import ProjectsSection from '../components/ProjectsSection';
 import FormSection from '../components/FormSection';
 
 const pageSerializer = new Map([
+	['blankHero', BlankHero],
 	['hero', Hero],
 	['textSection', TextSection],
 	['gridSection', GridSection],

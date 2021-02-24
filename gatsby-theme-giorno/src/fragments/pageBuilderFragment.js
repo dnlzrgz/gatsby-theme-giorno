@@ -3,6 +3,18 @@ import { graphql } from 'gatsby';
 export const query = graphql`
 	fragment PageBuilder on SanityPage {
 		pageBuilder {
+			... on SanityBlankHero {
+				_key
+				_type
+				subtitle
+				title
+				cta {
+					_key
+					_type
+					title
+					url
+				}
+			}
 			... on SanityHero {
 				_key
 				_type
@@ -76,11 +88,6 @@ export const query = graphql`
 					name
 					description
 					_rawImage
-					url {
-						_type
-						url
-						title
-					}
 					slug {
 						current
 					}

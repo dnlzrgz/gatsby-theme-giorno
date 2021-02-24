@@ -2,6 +2,7 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import author from './author';
+import blankHero from './blankHero';
 import blockContent from './blockContent';
 import blockSection from './blockSection';
 import config from './config';
@@ -34,6 +35,7 @@ export default createSchema({
 	name: 'default',
 	types: schemaTypes.concat([
 		author,
+		blankHero,
 		blockContent,
 		blockSection,
 		config,
