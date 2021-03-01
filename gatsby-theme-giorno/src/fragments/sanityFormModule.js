@@ -15,7 +15,6 @@ export const query = graphql`
 						_type
 						label
 						name
-						placeholder
 						required
 						type
 					}
@@ -26,7 +25,6 @@ export const query = graphql`
 						maxLength
 						minLength
 						name
-						placeholder
 						required
 					}
 					... on SanitySubmit {

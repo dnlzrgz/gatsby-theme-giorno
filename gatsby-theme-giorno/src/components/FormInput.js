@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FormInput = ({ module, register }) => {
-	const { name, label, type, required, placeholder } = module;
+	const { name, label, type, required } = module;
 
 	return (
 		<div className="flex flex-col gap-3">
@@ -14,7 +14,6 @@ const FormInput = ({ module, register }) => {
 				id={name}
 				type={type}
 				required={required}
-				placeholder={placeholder}
 				ref={register}
 			/>
 		</div>

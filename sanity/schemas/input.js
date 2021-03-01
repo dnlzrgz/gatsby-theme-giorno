@@ -26,12 +26,6 @@ export default {
 			description: 'Input label.',
 		},
 		{
-			name: 'placeholder',
-			type: 'string',
-			title: 'Placeholder Text',
-			description: 'Input placeholder.',
-		},
-		{
 			name: 'required',
 			title: 'Required',
 			type: 'boolean',

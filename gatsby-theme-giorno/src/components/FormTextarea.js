@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FormTextarea = ({ module, register }) => {
-	const { name, label, maxLength, minLength, required, placeholder } = module;
+	const { name, label, maxLength, minLength, required } = module;
 
 	return (
 		<div className="flex flex-col gap-3">
@@ -13,7 +13,6 @@ const FormTextarea = ({ module, register }) => {
 				id={name}
 				minLength={minLength}
 				maxLength={maxLength}
-				placeholder={placeholder}
 				required={required}
 				ref={register}
 				className="h-36 border px-2 py-3"

@@ -19,12 +19,6 @@ export default {
 			description: 'Textarea label.',
 		},
 		{
-			name: 'placeholder',
-			type: 'string',
-			title: 'Placeholder Text',
-			description: 'Textarea placeholder.',
-		},
-		{
 			name: 'minLength',
 			title: 'Minimum number of characters required',
 			type: 'number',

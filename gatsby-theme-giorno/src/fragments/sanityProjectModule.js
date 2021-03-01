@@ -9,12 +9,13 @@ export const query = graphql`
 				title
 				description
 				projects {
+					_id
 					name
 					description
-					_rawImage
 					slug {
 						current
 					}
+					_rawImage
 					image {
 						_type
 						asset {

@@ -44,12 +44,9 @@ export default {
 			type: 'datetime',
 		},
 		{
-			name: 'description',
-			title: 'Description',
-			type: 'string',
-			options: {
-				maxLength: 280,
-			},
+			name: 'content',
+			title: 'Content',
+			type: 'blockContent',
 		},
 	],
 
