@@ -1,4 +1,4 @@
-const createPagesFromSanity = async (graphql, actions, reporter) => {
+const createPagesFromSanity = async (graphql, actions) => {
 	const { createPage } = actions;
 	const res = await graphql(`
 		{
@@ -34,6 +34,41 @@ const createPagesFromSanity = async (graphql, actions, reporter) => {
 		});
 };
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-	await createPagesFromSanity(graphql, actions, reporter);
+const createPostsFromSanity = async (graphql, actions) => {
+	const { createPage } = actions;
+	const res = await graphql(`
+		{
+			posts: allSanityPost {
+				edges {
+					node {
+						public
+						slug {
+							current
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	if (res.errors) throw res.errors;
+
+	const pageEdges = (res.data.posts || {}).edges || [];
+	pageEdges
+		.filter((edge) => !!edge.node.public)
+		.forEach((edge) => {
+			const { current } = edge.node.slug;
+			const path = `/blog/${current}`;
+
+			createPage({
+				path,
+				component: require.resolve('./src/templates/post.js'),
+				context: { slug: current },
+			});
+		});
+};
+
+exports.createPages = async ({ graphql, actions }) => {
+	await createPagesFromSanity(graphql, actions);
+	await createPostsFromSanity(graphql, actions);
 };

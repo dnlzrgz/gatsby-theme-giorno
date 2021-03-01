@@ -4,6 +4,7 @@ const useSanityConfig = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			config: sanityConfig {
+				blogPage
 				copyright
 				sitemap
 			}
