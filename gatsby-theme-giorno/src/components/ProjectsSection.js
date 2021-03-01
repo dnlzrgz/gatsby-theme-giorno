@@ -19,9 +19,7 @@ const ProjectsSection = ({ module }) => {
 			</SectionHeader>
 			<main className="py-12 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-16">
 				{projects.map((project) => {
-					return (
-						<ProjectOverview key={project.slug.currrent} project={project} />
-					);
+					return <ProjectOverview key={project._id} project={project} />;
 				})}
 			</main>
 		</Section>
