@@ -5,6 +5,7 @@ import author from './author';
 import blankHero from './blankHero';
 import blockContent from './blockContent';
 import blockSection from './blockSection';
+import blogConfig from './blogConfig';
 import config from './config';
 import contact from './contact';
 import contactAddress from './contactAddress';
@@ -14,6 +15,7 @@ import cta from './cta';
 import description from './description';
 import externalLink from './externalLink';
 import externalLinks from './externalLinks';
+import footerConfig from './footerConfig';
 import form from './form';
 import gridItem from './gridItem';
 import gridSection from './gridSection';
@@ -25,6 +27,7 @@ import pageBuilder from './pageBuilder';
 import post from './post';
 import postCategory from './postCategory';
 import project from './project';
+import projectsConfig from './projectsConfig';
 import projectShowcase from './projectShowcase';
 import published from './published';
 import submit from './submit';
@@ -38,6 +41,7 @@ export default createSchema({
 		blankHero,
 		blockContent,
 		blockSection,
+		blogConfig,
 		config,
 		contact,
 		contactAddress,
@@ -47,6 +51,7 @@ export default createSchema({
 		description,
 		externalLink,
 		externalLinks,
+		footerConfig,
 		form,
 		gridItem,
 		gridSection,
@@ -58,6 +63,7 @@ export default createSchema({
 		post,
 		postCategory,
 		project,
+		projectsConfig,
 		projectShowcase,
 		published,
 		submit,
