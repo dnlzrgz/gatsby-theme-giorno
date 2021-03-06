@@ -1,34 +1,34 @@
 {
-  "name": "sanity",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "package.json",
-  "author": "Danielkvist <daniel@dkvist.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "sanity start",
-    "build": "sanity build",
-    "deploy-api": "sanity graphql deploy"
-  },
-  "keywords": [
-    "sanity"
-  ],
-  "dependencies": {
-    "@sanity/base": "^2.4.3",
-    "@sanity/code-input": "^2.2.6",
-    "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.4.0",
-    "@sanity/dashboard": "^2.2.6",
-    "@sanity/default-layout": "^2.4.3",
-    "@sanity/default-login": "^2.2.6",
-    "@sanity/desk-tool": "^2.4.3",
-    "@sanity/vision": "^2.2.6",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "react-icons": "^4.1.0",
-    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
-  },
-  "devDependencies": {}
+	"name": "sanity",
+	"private": true,
+	"version": "1.0.0",
+	"description": "",
+	"main": "package.json",
+	"author": "Danielkvist <daniel@dkvist.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "sanity start",
+		"build": "sanity build",
+		"api": "sanity graphql deploy"
+	},
+	"keywords": [
+		"sanity"
+	],
+	"dependencies": {
+		"@sanity/base": "^2.6.0",
+		"@sanity/code-input": "^2.2.6",
+		"@sanity/components": "^2.2.6",
+		"@sanity/core": "^2.6.1",
+		"@sanity/dashboard": "^2.2.6",
+		"@sanity/default-layout": "^2.6.0",
+		"@sanity/default-login": "^2.2.6",
+		"@sanity/desk-tool": "^2.6.1",
+		"@sanity/vision": "^2.2.6",
+		"prop-types": "^15.7",
+		"react": "^17.0",
+		"react-dom": "^17.0",
+		"react-icons": "^4.1.0",
+		"sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+	},
+	"devDependencies": {}
 }

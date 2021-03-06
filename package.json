@@ -1,13 +1,12 @@
 {
 	"private": true,
 	"scripts": {
-		"start": "yarn workspace gatsby-theme-giorno start",
-		"clean": "yarn workspace gatsby-theme-giorno clean",
-		"demo-clean": "yarn workspace demo clean",
-		"demo-start": "yarn workspace demo start",
-		"sanity-api": "yarn workspace sanity deploy-api",
-		"sanity-start": "yarn workspace sanity start",
-		"theme-start": "yarn workspace gatsby-theme-giorno start"
+		"clean": "yarn workspace demo clean",
+		"start": "yarn workspace demo start",
+		"theme-start": "yarn workspace gatsby-theme-giorno start",
+		"theme-clean": "yarn workspace gatsby-theme-giorno clean",
+		"sanity-api": "yarn workspace sanity api",
+		"sanity-start": "yarn workspace sanity start"
 	},
 	"workspaces": [
 		"gatsby-theme-giorno",
