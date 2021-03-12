@@ -10,6 +10,10 @@ const Header = () => {
 	const [open, setOpen] = useState(false);
 	const pages = useAllPages();
 
+	const clickLinkHandler = () => {
+		setOpen(false);
+	};
+
 	if (!pages.length) return null;
 	return (
 		<header className="w-full bg-white shadow fixed z-50">
@@ -22,13 +26,13 @@ const Header = () => {
 					}}
 				/>
 				<div className="hidden md:block p-1">
-					<NavMenuList pages={pages} />
+					<NavMenuList pages={pages} clickHandler={clickLinkHandler} />
 				</div>
 			</Nav>
 
 			{open ? (
 				<div className="md:hidden text-lg text-center z-10">
-					<NavMenuList pages={pages} />
+					<NavMenuList pages={pages} clickHandler={clickLinkHandler} />
 				</div>
 			) : null}
 		</header>

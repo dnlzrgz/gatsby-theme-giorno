@@ -15,7 +15,7 @@ const serializers = {
 				case 'blockquote':
 					return null;
 				case 'normal':
-					return <p className="max-w-prose px-4 py-2">{props.children}</p>;
+					return <p className="max-w-prose">{props.children}</p>;
 				default:
 					return null;
 			}

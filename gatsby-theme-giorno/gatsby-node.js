@@ -1,8 +1,54 @@
-const createPagesFromSanity = async (graphql, actions) => {
+const { paginate } = require('gatsby-awesome-pagination');
+
+const createPagesFromSanity = async (graphql, actions, reporter) => {
 	const { createPage } = actions;
 	const res = await graphql(`
 		{
-			pages: allSanityPage {
+			pages: allSanityPage(filter: { public: { eq: true } }) {
+				edges {
+					node {
+						slug {
+							current
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	if (res.errors) {
+		reporter.panicOnBuild(
+			`Error while running GraphQL query on createPagesFromSanity`
+		);
+		return;
+	}
+
+	const pages = (res.data.pages || {}).edges || [];
+	pages.forEach((edge) => {
+		const { current } = edge.node.slug;
+
+		if (current === 'index') return;
+		const path = `/${current}`;
+
+		createPage({
+			path,
+			component: require.resolve('./src/templates/page.js'),
+			context: { slug: current },
+		});
+	});
+};
+
+const createBlogPages = async (graphql, actions, reporter) => {
+	const { createPage } = actions;
+	const res = await graphql(`
+		{
+			config: sanityConfig {
+				blog: blogConfig {
+					enable
+					pagination
+				}
+			}
+			posts: allSanityPost(filter: { public: { eq: true } }) {
 				edges {
 					node {
 						public
@@ -15,60 +61,35 @@ const createPagesFromSanity = async (graphql, actions) => {
 		}
 	`);
 
-	if (res.errors) throw res.errors;
+	if (res.errors) {
+		reporter.panicOnBuild(
+			`Error while running GraphQL query on createBlogPages`
+		);
+		return;
+	}
 
-	const pageEdges = (res.data.pages || {}).edges || [];
-	pageEdges
-		.filter((edge) => !!edge.node.public)
-		.forEach((edge) => {
-			const { current } = edge.node.slug;
+	if (!res.data.config.blog.enable) return;
 
-			if (current === 'index') return;
-			const path = `/${current}`;
+	const posts = (res.data.posts || {}).edges || [];
+	const itemsPerPage = res.data.config.blog.pagination;
 
-			createPage({
-				path,
-				component: require.resolve('./src/templates/page.js'),
-				context: { slug: current },
-			});
-		});
+	if (!posts.length) {
+		reporter.panicOnBuild(`Error while creating blog pages: no posts found`);
+		return;
+	}
+
+	paginate({
+		createPage,
+		items: posts,
+		itemsPerPage,
+		pathPrefix: '/blog',
+		component: require.resolve('./src/templates/blog.js'),
+	});
 };
 
-const createPostsFromSanity = async (graphql, actions) => {
-	const { createPage } = actions;
-	const res = await graphql(`
-		{
-			posts: allSanityPost {
-				edges {
-					node {
-						public
-						slug {
-							current
-						}
-					}
-				}
-			}
-		}
-	`);
-
-	if (res.errors) throw res.errors;
-
-	const pageEdges = (res.data.posts || {}).edges || [];
-	pageEdges
-		.filter((edge) => !!edge.node.public)
-		.forEach((edge) => {
-			const { current } = edge.node.slug;
-			const path = `/blog/${current}`;
-
-			createPage({
-				path,
-				component: require.resolve('./src/templates/post.js'),
-				context: { slug: current },
-			});
-		});
-};
-
-exports.createPages = async ({ graphql, actions }) => {
-	await createPagesFromSanity(graphql, actions);
-	await createPostsFromSanity(graphql, actions);
+exports.createPages = async ({ graphql, actions, reporter }) => {
+	await Promise.all([
+		createPagesFromSanity(graphql, actions, reporter),
+		createBlogPages(graphql, actions, reporter),
+	]);
 };

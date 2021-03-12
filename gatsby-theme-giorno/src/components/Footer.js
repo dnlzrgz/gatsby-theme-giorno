@@ -9,7 +9,9 @@ import FooterContact from './FooterContact';
 import FooterCopyright from './FooterCopyright';
 
 const Footer = () => {
-	const { copyright, sitemap } = useSanityConfig();
+	const {
+		footer: { sitemap, copyright },
+	} = useSanityConfig();
 	const links = useSanityExternalLinks();
 	const contact = useSanityContactOptions();
 

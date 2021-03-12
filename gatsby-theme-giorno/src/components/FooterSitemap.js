@@ -10,7 +10,6 @@ const FooterSitemap = () => {
 	return (
 		<section>
 			<header className="text-lg font-semibold">
-				{/* TODO: Add icon */}
 				<Link to="/sitemap.xml">
 					<h2>Sitemap</h2>
 				</Link>

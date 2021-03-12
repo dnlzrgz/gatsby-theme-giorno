@@ -1,12 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useSanityConfig = () => {
+	// TODO: refactor query into a GraphQL fragment
 	const data = useStaticQuery(graphql`
 		query {
 			config: sanityConfig {
-				blogPage
-				copyright
-				sitemap
+				blog: blogConfig {
+					enable
+				}
+				footer: footerConfig {
+					copyright
+					sitemap
+				}
 			}
 		}
 	`);
