@@ -4,6 +4,15 @@
 	"main": "index.js",
 	"license": "MIT",
 	"private": false,
+	"keywords": [
+		"gatsby",
+		"gatsby-plugin",
+		"gatsby-theme",
+		"tailwindcss",
+		"portfolio",
+		"sanity",
+		"blog"
+	],
 	"scripts": {
 		"build": "gatsby build",
 		"clean": "gatsby clean",

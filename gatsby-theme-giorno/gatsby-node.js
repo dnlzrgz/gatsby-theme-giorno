@@ -87,9 +87,56 @@ const createBlogPages = async (graphql, actions, reporter) => {
 	});
 };
 
+const createPostPagesFromSanity = async (graphql, actions, reporter) => {
+	const { createPage } = actions;
+	const res = await graphql(`
+		{
+			config: sanityConfig {
+				blog: blogConfig {
+					enable
+				}
+			}
+			posts: allSanityPost(
+				filter: { public: { eq: true } }
+				sort: { fields: publishedAt, order: ASC }
+			) {
+				edges {
+					node {
+						slug {
+							current
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	if (res.errors) {
+		reporter.panicOnBuild(
+			`Error while running GraphQL query on createPostPagesFromSanity`
+		);
+		return;
+	}
+
+	if (!res.data.config.blog.enable) return;
+
+	const pages = (res.data.posts || {}).edges || [];
+	pages.forEach((edge) => {
+		const { current } = edge.node.slug;
+		const path = `/blog/${current}`;
+
+		createPage({
+			path,
+			component: require.resolve('./src/templates/post.js'),
+			context: { slug: current },
+		});
+	});
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
 	await Promise.all([
 		createPagesFromSanity(graphql, actions, reporter),
 		createBlogPages(graphql, actions, reporter),
+		createPostPagesFromSanity(graphql, actions, reporter),
 	]);
 };
