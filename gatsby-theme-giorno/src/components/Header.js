@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import useAllPages from '../hooks/use-all-pages';
+import useSanityConfig from '../hooks/use-sanity-config';
 import Nav from './Nav';
 import NavHomeLink from './NavHomeLink';
 import NavMenuButton from './NavMenuButton';
@@ -8,17 +8,17 @@ import NavMenuList from './NavMenuList';
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
-	const pages = useAllPages();
+	const { global } = useSanityConfig();
 
 	const clickLinkHandler = () => {
 		setOpen(false);
 	};
 
-	if (!pages.length) return null;
+	console.log(global);
 	return (
 		<header className="w-full bg-white shadow fixed z-50">
 			<Nav>
-				<NavHomeLink>Giorno</NavHomeLink>
+				<NavHomeLink clickHandler={clickLinkHandler}>Giorno</NavHomeLink>
 				<NavMenuButton
 					open={open}
 					handleClick={() => {
@@ -26,13 +26,13 @@ const Header = () => {
 					}}
 				/>
 				<div className="hidden md:block p-1">
-					<NavMenuList pages={pages} clickHandler={clickLinkHandler} />
+					<NavMenuList clickHandler={clickLinkHandler} />
 				</div>
 			</Nav>
 
 			{open ? (
 				<div className="md:hidden text-lg text-center z-10">
-					<NavMenuList pages={pages} clickHandler={clickLinkHandler} />
+					<NavMenuList clickHandler={clickLinkHandler} />
 				</div>
 			) : null}
 		</header>
