@@ -5,6 +5,9 @@ const useSanityConfig = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			config: sanityConfig {
+				global: globalConfig {
+					navbar
+				}
 				blog: blogConfig {
 					enable
 				}
