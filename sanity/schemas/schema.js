@@ -17,6 +17,7 @@ import externalLink from './externalLink';
 import externalLinks from './externalLinks';
 import footerConfig from './footerConfig';
 import form from './form';
+import globalConfig from './globalConfig';
 import gridItem from './gridItem';
 import gridSection from './gridSection';
 import hero from './hero';
@@ -53,6 +54,7 @@ export default createSchema({
 		externalLinks,
 		footerConfig,
 		form,
+		globalConfig,
 		gridItem,
 		gridSection,
 		hero,

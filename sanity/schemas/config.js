@@ -5,6 +5,10 @@ export default {
 	__experimental_actions: ['create', 'update', 'publish'],
 	fields: [
 		{
+			name: 'globalConfig',
+			type: 'globalConfig',
+		},
+		{
 			name: 'blogConfig',
 			type: 'blogConfig',
 		},
