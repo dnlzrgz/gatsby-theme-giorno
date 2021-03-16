@@ -6,6 +6,10 @@ const useSanityConfig = () => {
 		query {
 			config: sanityConfig {
 				global: globalConfig {
+					title
+					description {
+						_rawChildren
+					}
 					navbar
 				}
 				blog: blogConfig {
