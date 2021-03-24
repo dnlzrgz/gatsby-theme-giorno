@@ -6,7 +6,7 @@ const NavMenuButton = ({ open, handleClick }) => {
 	return (
 		<button
 			type="button"
-			className="md:hidden text-black-700 p-1"
+			className="md:hidden text-text dark:text-invert-text p-1"
 			onClick={handleClick}
 		>
 			{!open ? <MenuIcon /> : <CloseMenuIcon />}

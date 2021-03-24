@@ -7,7 +7,9 @@ const Layout = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<main>{children}</main>
+			<main className="text-text dark:text-invert-text bg-background dark:bg-invert-background">
+				{children}
+			</main>
 			<Footer />
 		</>
 	);

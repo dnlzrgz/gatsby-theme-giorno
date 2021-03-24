@@ -8,17 +8,19 @@ import NavMenuList from './NavMenuList';
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
-	const { global } = useSanityConfig();
+	const {
+		global: { title, navbar },
+	} = useSanityConfig();
 
-	const clickLinkHandler = () => {
+	const clinkHandler = () => {
 		setOpen(false);
 	};
 
-	console.log(global);
+	if (!navbar) return null;
 	return (
-		<header className="w-full bg-white shadow fixed z-50">
+		<header className="w-full bg-white dark:bg-invert-background shadow fixed z-50">
 			<Nav>
-				<NavHomeLink clickHandler={clickLinkHandler}>Giorno</NavHomeLink>
+				<NavHomeLink clickHandler={clinkHandler}>{title}</NavHomeLink>
 				<NavMenuButton
 					open={open}
 					handleClick={() => {
@@ -26,13 +28,13 @@ const Header = () => {
 					}}
 				/>
 				<div className="hidden md:block p-1">
-					<NavMenuList clickHandler={clickLinkHandler} />
+					<NavMenuList clickHandler={clinkHandler} />
 				</div>
 			</Nav>
 
 			{open ? (
 				<div className="md:hidden text-lg text-center z-10">
-					<NavMenuList clickHandler={clickLinkHandler} />
+					<NavMenuList clickHandler={clinkHandler} />
 				</div>
 			) : null}
 		</header>
