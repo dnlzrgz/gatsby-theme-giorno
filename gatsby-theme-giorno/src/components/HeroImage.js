@@ -1,12 +1,18 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const HeroImage = ({ fluidAsset }) => (
-	<Img
-		fluid={fluidAsset}
-		className="h-screen w-full object-cover absolute inset-0"
-		fadeIn
-	/>
-);
+const HeroImage = ({ asset }) => {
+	const assetData = getImage(asset);
+
+	// This image is purely presentational that's why
+	// the alt is empty.
+	return (
+		<GatsbyImage
+			image={assetData}
+			alt=""
+			className="h-screen w-full object-cover"
+		/>
+	);
+};
 
 export default HeroImage;

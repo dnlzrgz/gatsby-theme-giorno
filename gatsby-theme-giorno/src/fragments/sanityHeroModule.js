@@ -10,19 +10,15 @@ export const query = graphql`
 				subtitle
 				whiteText
 				cta {
-					_type
 					title
 					url
 				}
 				image {
-					_type
 					asset {
-						fixed {
-							...GatsbySanityImageFixed
-						}
-						fluid {
-							...GatsbySanityImageFluid
-						}
+						gatsbyImageData(
+							placeholder: DOMINANT_COLOR
+							formats: [AUTO, WEBP, AVIF]
+						)
 					}
 				}
 			}

@@ -20,7 +20,7 @@ const Hero = ({ module }) => {
 			</header>
 
 			<main style={{ gridArea: '1/1' }}>
-				<HeroImage fluidAsset={image.asset.fluid} />
+				<HeroImage asset={image.asset} />
 			</main>
 		</section>
 	);
