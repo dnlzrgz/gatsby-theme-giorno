@@ -19,7 +19,7 @@ const GridSection = ({ module }) => {
 					) : null}
 				</SectionHeader>
 				<main className="flex items-center justify-center py-12">
-					<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
 						{items.map((item) => (
 							<GridItem
 								key={item._key}
