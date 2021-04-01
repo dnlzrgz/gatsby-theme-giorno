@@ -7,14 +7,14 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: colors.lightBlue[500],
-				secondary: colors.lightBlue[600],
+				'darker-primary': colors.lightBlue[600],
 				accent: colors.pink[500],
+				'darker-accent': colors.pink[600],
 				background: colors.white,
-				'invert-background': colors.coolGray[900],
+				'invert-background': colors.coolGray[800],
 				text: colors.coolGray[900],
 				'invert-text': colors.white,
-				heading: colors.lightBlue[900],
-				neutral: colors.coolGray[700],
+				footer: colors.coolGray[600],
 			},
 		},
 	},
