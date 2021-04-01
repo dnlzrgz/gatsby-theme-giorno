@@ -12,6 +12,10 @@ export default {
 			type: 'title',
 		},
 		{
+			name: 'description',
+			type: 'description',
+		},
+		{
 			name: 'name',
 			title: 'Form name',
 			type: 'string',
