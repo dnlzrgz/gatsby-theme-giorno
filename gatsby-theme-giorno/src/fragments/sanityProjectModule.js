@@ -17,14 +17,11 @@ export const query = graphql`
 					}
 					_rawImage
 					image {
-						_type
 						asset {
-							fixed {
-								...GatsbySanityImageFixed
-							}
-							fluid {
-								...GatsbySanityImageFluid
-							}
+							gatsbyImageData(
+								placeholder: DOMINANT_COLOR
+								formats: [AUTO, WEBP, AVIF]
+							)
 						}
 					}
 				}
