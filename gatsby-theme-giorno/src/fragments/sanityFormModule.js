@@ -9,6 +9,7 @@ export const query = graphql`
 				_rawInputs
 				name
 				title
+				description
 				inputs {
 					... on SanityInput {
 						_key
