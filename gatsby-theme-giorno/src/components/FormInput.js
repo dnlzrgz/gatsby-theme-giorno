@@ -4,7 +4,6 @@ import FormInputLabel from './FormInputLabel';
 
 const FormInput = ({ module, register }) => {
 	const { name, label, type, required } = module;
-	console.log(name, required);
 
 	return (
 		<div className="flex flex-col gap-3">
