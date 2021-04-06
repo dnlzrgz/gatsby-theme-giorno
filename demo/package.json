@@ -12,6 +12,7 @@
 	},
 	"dependencies": {
 		"gatsby": "^3.0.0",
+		"gatsby-plugin-offline": "^4.2.0",
 		"gatsby-theme-giorno": "*",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1"
