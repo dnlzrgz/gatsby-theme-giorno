@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useSanityConfig = () => {
-	// TODO: refactor query into a GraphQL fragment
 	const data = useStaticQuery(graphql`
 		query {
 			config: sanityConfig {
@@ -10,6 +9,13 @@ const useSanityConfig = () => {
 					description {
 						_rawChildren
 					}
+					image {
+						asset {
+							gatsbyImageData(formats: [AUTO])
+						}
+					}
+					siteURL
+					twitterUsername
 					navbar
 				}
 				blog: blogConfig {

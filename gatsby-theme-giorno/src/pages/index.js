@@ -1,10 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import SEO from '../components/SEO';
 import pageBuilder from '../utils/pageBuilder';
 
 const Index = ({ data }) => {
-	return <>{pageBuilder(data.page.pageBuilder)}</>;
+	return (
+		<>
+			<SEO path="/" />
+			{pageBuilder(data.page.pageBuilder)}
+		</>
+	);
 };
 
 export const query = graphql`
