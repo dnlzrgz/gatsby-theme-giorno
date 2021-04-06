@@ -46,7 +46,7 @@ export default {
 		{
 			name: 'content',
 			title: 'Content',
-			type: 'blockContent',
+			type: 'richContent',
 		},
 	],
 

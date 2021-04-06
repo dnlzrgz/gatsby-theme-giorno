@@ -1,6 +1,6 @@
 export default {
-	name: 'blockContent',
-	title: 'Rich text',
+	name: 'richContent',
+	title: 'Rich Content Block',
 	type: 'array',
 	description: 'Rich text editor with support for code blocks and images.',
 	of: [

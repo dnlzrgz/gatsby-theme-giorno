@@ -17,7 +17,7 @@ export default {
 		{
 			name: 'content',
 			title: 'Section content',
-			type: 'blockContent',
+			type: 'richContent',
 			validation: (Rule) => Rule.required(),
 		},
 	],

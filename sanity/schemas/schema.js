@@ -3,7 +3,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import author from './author';
 import blankHero from './blankHero';
-import blockContent from './blockContent';
 import blockSection from './blockSection';
 import blogConfig from './blogConfig';
 import config from './config';
@@ -25,12 +24,14 @@ import input from './input';
 import internalLink from './internalLink';
 import page from './page';
 import pageBuilder from './pageBuilder';
+import plainContent from './plainContent';
 import post from './post';
 import postCategory from './postCategory';
 import project from './project';
 import projectsConfig from './projectsConfig';
 import projectShowcase from './projectShowcase';
 import published from './published';
+import richContent from './richContent';
 import submit from './submit';
 import textarea from './textarea';
 import title from './title';
@@ -40,7 +41,6 @@ export default createSchema({
 	types: schemaTypes.concat([
 		author,
 		blankHero,
-		blockContent,
 		blockSection,
 		blogConfig,
 		config,
@@ -62,12 +62,14 @@ export default createSchema({
 		internalLink,
 		page,
 		pageBuilder,
+		plainContent,
 		post,
 		postCategory,
 		project,
 		projectsConfig,
 		projectShowcase,
 		published,
+		richContent,
 		submit,
 		textarea,
 		title,

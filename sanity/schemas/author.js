@@ -35,7 +35,7 @@ export default {
 		{
 			name: 'bio',
 			title: 'Bio',
-			type: 'blockContent',
+			type: 'richContent',
 			validation: (Rule) => Rule.required(),
 		},
 		{
