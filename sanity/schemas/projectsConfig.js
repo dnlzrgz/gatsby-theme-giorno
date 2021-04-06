@@ -2,7 +2,7 @@ export default {
 	name: 'projectsConfig',
 	title: 'Projects',
 	type: 'object',
-	description: 'Projects related configuration.',
+	description: 'Projects configuration.',
 	fields: [
 		{
 			name: 'enable',

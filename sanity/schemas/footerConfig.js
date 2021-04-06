@@ -14,7 +14,6 @@ export default {
 			name: 'copyright',
 			title: 'Copyright message',
 			type: 'string',
-			// FIXME: improve description
 			description: 'Copyright message.',
 			validation: (Rule) => Rule.required(),
 		},

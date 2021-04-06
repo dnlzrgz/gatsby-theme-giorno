@@ -2,21 +2,20 @@ export default {
 	name: 'blogConfig',
 	title: 'Blog',
 	type: 'object',
-	description: 'Blog related configuration.',
+	description: 'Blog configuration.',
 	fields: [
 		{
 			name: 'enable',
 			title: 'Blog page',
 			type: 'boolean',
-			// FIXME: improve description
 			description:
-				'Adds a \\blog page with pagination (\\blog\\1, \\blog\\2,...). If there are no posts the will be created but will redirect to page \\404.',
+				'If there is at least one post marked as public it generates a blog page with pagination included.',
 		},
 		{
 			name: 'pagination',
 			title: 'Posts per page',
 			type: 'number',
-			description: 'Number of posts per page if the blog page is enabled.',
+			description: 'Number of posts per page.',
 			validation: (Rule) => Rule.min(1).integer().positive().required(),
 		},
 	],

@@ -1,9 +1,8 @@
-// TODO: add icon
 export default {
 	name: 'cta',
 	title: 'CTA',
 	type: 'object',
-	description: 'A Call-To-Action.',
+	description: 'A simple Call-To-Action.',
 	fields: [
 		{
 			name: 'title',
@@ -15,7 +14,7 @@ export default {
 			name: 'url',
 			title: 'URL',
 			type: 'string',
-			description: 'CTA target.',
+			description: 'CTA target URL.',
 		},
 	],
 };

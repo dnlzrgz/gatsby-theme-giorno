@@ -1,6 +1,5 @@
 import { BsListUl as icon } from 'react-icons/bs';
 
-// TODO: Add a field to select Netlify forms or other services
 export default {
 	name: 'form',
 	title: 'Form',
@@ -20,7 +19,7 @@ export default {
 			title: 'Form name',
 			type: 'string',
 			description:
-				'Name attribute to reference form data after a form is submitted.',
+				'Name attribute to reference each form input after a form is submitted.',
 			validation: (Rule) =>
 				Rule.required()
 					.lowercase()
