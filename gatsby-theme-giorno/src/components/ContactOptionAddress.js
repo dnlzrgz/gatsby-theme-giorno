@@ -5,8 +5,9 @@ const ContactOptionAddress = ({ module }) => {
 
 	return (
 		<>
-			<p>{title}:</p>
-			<address>{address}</address>
+			<address className="inline">
+				<span className="font-medium">{title}</span>: {address}
+			</address>
 		</>
 	);
 };

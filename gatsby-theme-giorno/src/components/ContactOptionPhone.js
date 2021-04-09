@@ -5,8 +5,10 @@ const ContactOptionPhone = ({ module }) => {
 
 	return (
 		<>
-			<p>{title}:</p>
-			<a href={`tel:${phone}`}>{phone}</a>
+			<p>
+				<span className="font-medium">{title}</span>:{' '}
+				<a href={`tel:${phone}`}>{phone}</a>
+			</p>
 		</>
 	);
 };

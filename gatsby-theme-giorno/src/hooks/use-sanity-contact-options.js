@@ -3,11 +3,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 const useSanityContactOptions = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			contact: sanityContact {
-				id
+			contactOptions: sanityContact {
 				title
 				description
-				option {
+				options: option {
 					... on SanityContactAddress {
 						_key
 						_type
@@ -32,7 +31,7 @@ const useSanityContactOptions = () => {
 		}
 	`);
 
-	return data.contact;
+	return data.contactOptions;
 };
 
 export default useSanityContactOptions;

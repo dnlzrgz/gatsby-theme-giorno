@@ -8,17 +8,21 @@ import FooterSitemap from './FooterSitemap';
 import FooterContact from './FooterContact';
 import FooterCopyright from './FooterCopyright';
 
+// TODO: Fix lists in external links and contact sections
+
 const Footer = () => {
 	const {
 		footer: { sitemap, copyright },
 	} = useSanityConfig();
 	const links = useSanityExternalLinks();
-	const contact = useSanityContactOptions();
+	const contactOptions = useSanityContactOptions();
 
 	return (
-		<footer className="text-invert-text bg-footer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-16 px-6 md:px-12">
-			{links && links.length !== 0 ? <FooterSocialLinks links={links} /> : null}
-			{contact && contact.title ? <FooterContact details={contact} /> : null}
+		<footer className="text-invert-text bg-footer grid grid-cols-1 sm:grid-cols-3 gap-6 py-16 px-6 md:px-12">
+			{links?.length !== 0 ? <FooterSocialLinks links={links} /> : null}
+			{contactOptions?.title ? (
+				<FooterContact details={contactOptions} />
+			) : null}
 			{sitemap ? <FooterSitemap /> : null}
 			{copyright ? <FooterCopyright copy={copyright} /> : null}
 		</footer>

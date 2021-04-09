@@ -1,12 +1,16 @@
 import React from 'react';
+import FooterSectionMain from './FooterSectionMain';
+
+import FooterSection from './FooterSection';
+import FooterSectionTitle from './FooterSectionTitle';
 
 const FooterSocialLinks = ({ links }) => {
 	return (
-		<section>
-			<header className="text-lg font-semibold">
-				<h2>Social links</h2>
+		<FooterSection>
+			<header>
+				<FooterSectionTitle title="External links" />
 			</header>
-			<main className="flex flex-col gap-1">
+			<FooterSectionMain>
 				{links.map(({ node }) => {
 					return (
 						<a key={node.id} href={node.url}>
@@ -14,8 +18,8 @@ const FooterSocialLinks = ({ links }) => {
 						</a>
 					);
 				})}
-			</main>
-		</section>
+			</FooterSectionMain>
+		</FooterSection>
 	);
 };
 

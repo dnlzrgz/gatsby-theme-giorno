@@ -1,17 +1,21 @@
 import React from 'react';
 
+import FooterSection from './FooterSection';
+import FooterSectionTitle from './FooterSectionTitle';
+import FooterSectionMain from './FooterSectionMain';
 import footerContactBuilder from '../utils/footerContactBuilder';
 
 const FooterContact = ({ details }) => {
-	const { title, description, option } = details;
+	const { title, description, options } = details;
+
 	return (
-		<section>
+		<FooterSection>
 			<header className="text-lg font-semibold">
-				<h2>{title}</h2>
+				<FooterSectionTitle title={title} />
 				{description ? <p>{description}</p> : null}
 			</header>
-			<main>{footerContactBuilder(option)}</main>
-		</section>
+			<FooterSectionMain>{footerContactBuilder(options)}</FooterSectionMain>
+		</FooterSection>
 	);
 };
 

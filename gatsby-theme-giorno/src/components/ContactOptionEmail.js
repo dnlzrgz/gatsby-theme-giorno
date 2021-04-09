@@ -5,8 +5,10 @@ const ContactOptionEmail = ({ module }) => {
 
 	return (
 		<>
-			<p>{title}:</p>
-			<a href={`mailto:${email}`}>{email}</a>
+			<p>
+				<span className="font-medium">{title}</span>:{' '}
+				<a href={`mailto:${email}`}>{email}</a>
+			</p>
 		</>
 	);
 };

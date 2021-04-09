@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import FooterSection from './FooterSection';
+import FooterSectionTitle from './FooterSectionTitle';
+import FooterSectionMain from './FooterSectionMain';
 import useAllPages from '../hooks/use-all-pages';
 import useSanityConfig from '../hooks/use-sanity-config';
 
@@ -12,13 +15,16 @@ const FooterSitemap = () => {
 
 	if (!pages.length) return null;
 	return (
-		<section>
+		<FooterSection>
 			<header className="text-lg font-semibold">
 				<Link to="/sitemap.xml">
-					<h2>Sitemap</h2>
+					<FooterSectionTitle title="Sitemap" />
 				</Link>
 			</header>
-			<main className="flex flex-col">
+			<FooterSectionMain>
+				<Link key={'home'} to="/">
+					Home
+				</Link>
 				{enable ? (
 					<Link key={'blog'} to="/blog">
 						Blog
@@ -29,8 +35,8 @@ const FooterSitemap = () => {
 						{page.title}
 					</Link>
 				))}
-			</main>
-		</section>
+			</FooterSectionMain>
+		</FooterSection>
 	);
 };
 
