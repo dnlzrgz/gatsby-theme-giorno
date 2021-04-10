@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactOptionAddress = ({ module }) => {
 	const { title, address } = module;
@@ -10,6 +11,10 @@ const ContactOptionAddress = ({ module }) => {
 			</address>
 		</>
 	);
+};
+
+ContactOptionAddress.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default ContactOptionAddress;

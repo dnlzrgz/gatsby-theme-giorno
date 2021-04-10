@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FooterCopyright = ({ copy }) => {
 	return (
@@ -8,6 +9,10 @@ const FooterCopyright = ({ copy }) => {
 			</main>
 		</section>
 	);
+};
+
+FooterCopyright.propTypes = {
+	copy: PropTypes.string.isRequired,
 };
 
 export default FooterCopyright;

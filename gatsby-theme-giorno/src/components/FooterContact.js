@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import FooterSection from './FooterSection';
 import FooterSectionTitle from './FooterSectionTitle';
@@ -17,6 +18,10 @@ const FooterContact = ({ details }) => {
 			<FooterSectionMain>{footerContactBuilder(options)}</FooterSectionMain>
 		</FooterSection>
 	);
+};
+
+FooterContact.propTypes = {
+	details: PropTypes.object.isRequired,
 };
 
 export default FooterContact;

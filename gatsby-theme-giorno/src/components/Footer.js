@@ -8,8 +8,6 @@ import FooterSitemap from './FooterSitemap';
 import FooterContact from './FooterContact';
 import FooterCopyright from './FooterCopyright';
 
-// TODO: Fix lists in external links and contact sections
-
 const Footer = () => {
 	const {
 		footer: { sitemap, copyright },

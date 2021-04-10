@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FooterSection = ({ children }) => {
 	return (
@@ -6,6 +7,10 @@ const FooterSection = ({ children }) => {
 			<div>{children}</div>
 		</section>
 	);
+};
+
+FooterSection.propTypes = {
+	children: PropTypes.node.isRequired,
 };
 
 export default FooterSection;

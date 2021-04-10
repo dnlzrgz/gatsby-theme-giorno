@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
 
 const CTA = ({ title, url }) => {
@@ -15,6 +16,11 @@ const CTA = ({ title, url }) => {
 			</button>
 		</div>
 	);
+};
+
+CTA.propTypes = {
+	title: PropTypes.string.isRequired,
+	url: PropTypes.string.isRequired,
 };
 
 export default CTA;

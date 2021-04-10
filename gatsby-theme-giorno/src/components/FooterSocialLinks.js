@@ -1,6 +1,7 @@
 import React from 'react';
-import FooterSectionMain from './FooterSectionMain';
+import PropTypes from 'prop-types';
 
+import FooterSectionMain from './FooterSectionMain';
 import FooterSection from './FooterSection';
 import FooterSectionTitle from './FooterSectionTitle';
 
@@ -21,6 +22,10 @@ const FooterSocialLinks = ({ links }) => {
 			</FooterSectionMain>
 		</FooterSection>
 	);
+};
+
+FooterSocialLinks.propTypes = {
+	links: PropTypes.array.isRequired,
 };
 
 export default FooterSocialLinks;

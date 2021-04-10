@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import FormInputLabel from './FormInputLabel';
 
-const FormInput = ({ module, register }) => {
+const FormInput = ({ module }) => {
 	const { name, label, type, required } = module;
 
 	return (
@@ -14,10 +15,13 @@ const FormInput = ({ module, register }) => {
 				id={name}
 				type={type}
 				required={required}
-				ref={register}
 			/>
 		</div>
 	);
+};
+
+FormInput.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default FormInput;

@@ -6,8 +6,6 @@ import ContentBlock from './ContentBlock';
 const PostCard = ({ post }) => {
 	if (!post._rawContent.length) return null;
 
-	console.log(post);
-
 	return (
 		<article className="md:max-w-5xl border shadow flex flex-col gap-6 py-6 px-9">
 			<header>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactOptionEmail = ({ module }) => {
 	const { title, email } = module;
@@ -11,6 +12,10 @@ const ContactOptionEmail = ({ module }) => {
 			</p>
 		</>
 	);
+};
+
+ContactOptionEmail.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default ContactOptionEmail;

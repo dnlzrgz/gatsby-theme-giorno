@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 import useSanityConfig from '../hooks/use-sanity-config';
@@ -48,6 +49,13 @@ const SEO = ({ title, path, description, image }) => {
 			{seo.image && <meta name="twitter:image" content={seo.image} />}
 		</Helmet>
 	);
+};
+
+SEO.propTypes = {
+	title: PropTypes.string,
+	path: PropTypes.string,
+	description: PropTypes.string,
+	image: PropTypes.string,
 };
 
 export default SEO;

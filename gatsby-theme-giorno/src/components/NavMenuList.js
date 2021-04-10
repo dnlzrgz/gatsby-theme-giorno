@@ -1,16 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import useAllPages from '../hooks/use-all-pages';
 import useSanityConfig from '../hooks/use-sanity-config';
-
-const MenuListItem = ({ children }) => {
-	return (
-		<li className="text-text dark:text-invert-text hover:text-primary py-3 md:py-0">
-			{children}
-		</li>
-	);
-};
+import MenuListItem from './MenuListItem';
 
 const NavMenuList = ({ clickHandler }) => {
 	const pages = useAllPages();
@@ -20,22 +14,18 @@ const NavMenuList = ({ clickHandler }) => {
 
 	return (
 		<ul className="grid grid-flow-row md:grid-flow-col md:py-0 md:gap-12 pb-6 md:pb-0">
-			<MenuListItem>
-				{enable ? (
+			{enable ? (
+				<MenuListItem>
 					<Link key="blog" to="/blog" onClick={clickHandler}>
 						Blog
 					</Link>
-				) : null}
-			</MenuListItem>
+				</MenuListItem>
+			) : null}
 
 			{pages.map((page) => {
 				return (
-					<MenuListItem>
-						<Link
-							key={page.id}
-							to={`/${page.slug.current}`}
-							onClick={clickHandler}
-						>
+					<MenuListItem key={page.slug.current}>
+						<Link to={`/${page.slug.current}`} onClick={clickHandler}>
 							{page.title}
 						</Link>
 					</MenuListItem>
@@ -43,6 +33,10 @@ const NavMenuList = ({ clickHandler }) => {
 			})}
 		</ul>
 	);
+};
+
+NavMenuList.propTypes = {
+	clickHandler: PropTypes.func.isRequired,
 };
 
 export default NavMenuList;

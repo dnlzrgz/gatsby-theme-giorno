@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import HeroTitle from './HeroTitle';
 import HeroSubtitle from './HeroSubtitle';
@@ -24,6 +25,10 @@ const Hero = ({ module }) => {
 			</main>
 		</section>
 	);
+};
+
+Hero.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default Hero;

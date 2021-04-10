@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import HeroTitle from './HeroTitle';
 import HeroSubtitle from './HeroSubtitle';
@@ -16,6 +17,10 @@ const BlankHero = ({ module }) => {
 			</header>
 		</section>
 	);
+};
+
+BlankHero.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default BlankHero;

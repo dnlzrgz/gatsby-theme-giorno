@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SectionHeader = ({ children }) => {
 	return (
@@ -6,6 +7,10 @@ const SectionHeader = ({ children }) => {
 			{children}
 		</header>
 	);
+};
+
+SectionHeader.propTypes = {
+	children: PropTypes.node.isRequired,
 };
 
 export default SectionHeader;

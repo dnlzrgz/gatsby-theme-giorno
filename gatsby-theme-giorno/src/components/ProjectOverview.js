@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 import ImageBlock from './ImageBlock';
@@ -22,6 +23,10 @@ const ProjectOverview = ({ project }) => {
 			</div>
 		</div>
 	);
+};
+
+ProjectOverview.propTypes = {
+	project: PropTypes.object.isRequired,
 };
 
 export default ProjectOverview;

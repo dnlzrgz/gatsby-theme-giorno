@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Section from './Section';
 import SectionHeader from './SectionHeader';
@@ -32,6 +33,10 @@ const GridSection = ({ module }) => {
 			</div>
 		</Section>
 	);
+};
+
+GridSection.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default GridSection;

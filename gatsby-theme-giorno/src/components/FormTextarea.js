@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import FormInputLabel from './FormInputLabel';
 
-const FormTextarea = ({ module, register }) => {
+const FormTextarea = ({ module }) => {
 	const { name, label, maxLength, minLength, required } = module;
 
 	return (
@@ -15,10 +16,13 @@ const FormTextarea = ({ module, register }) => {
 				minLength={minLength}
 				maxLength={maxLength}
 				required={required}
-				ref={register}
 			/>
 		</div>
 	);
+};
+
+FormTextarea.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default FormTextarea;

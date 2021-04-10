@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Section from './Section';
 import SectionHeader from './SectionHeader';
@@ -24,6 +25,10 @@ const ProjectsSection = ({ module }) => {
 			</main>
 		</Section>
 	);
+};
+
+ProjectsSection.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default ProjectsSection;

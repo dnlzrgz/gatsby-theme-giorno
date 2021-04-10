@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Section from './Section';
 import SectionTitle from './SectionTitle';
@@ -19,6 +20,10 @@ const TextSection = ({ module }) => {
 			</main>
 		</Section>
 	);
+};
+
+TextSection.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default TextSection;

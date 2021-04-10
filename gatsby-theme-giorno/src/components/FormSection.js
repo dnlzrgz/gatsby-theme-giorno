@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import formBuilder from '../utils/formBuilder';
 import Section from './Section';
@@ -39,6 +40,10 @@ const FormSection = ({ module }) => {
 			</main>
 		</Section>
 	);
+};
+
+FormSection.propTypes = {
+	module: PropTypes.object.isRequired,
 };
 
 export default FormSection;
