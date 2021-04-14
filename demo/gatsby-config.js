@@ -1,3 +1,3 @@
 module.exports = {
-	plugins: ['gatsby-theme-giorno', 'gatby-plugin-offline'],
+	plugins: ['gatsby-theme-giorno', 'gatsby-plugin-postcss'],
 };

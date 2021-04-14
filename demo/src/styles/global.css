@@ -5,8 +5,8 @@
 @layer base {
 	:root {
 		/* COLOR THEME */
-		--color-primary: #3b82f6;
-		--color-darker-primary: #2563eb;
+		--color-primary: #16a34a;
+		--color-darker-primary: #15803d;
 		--color-accent: #ec4899;
 		--color-darker-accent: #db2777;
 		--color-background: #fff;
