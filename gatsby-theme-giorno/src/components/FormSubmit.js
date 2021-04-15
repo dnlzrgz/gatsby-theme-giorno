@@ -7,7 +7,7 @@ const FormSubmit = ({ onSubmit, children }) => {
 			<button
 				type="submit"
 				onClick={onSubmit}
-				className="text-md font-semibold uppercase bg-primary hover:bg-darker-primary text-invert-text px-6 py-3 tracking-wide outline-none rounded-md shadow"
+				className="text-md font-medium uppercase bg-primary hover:bg-darker-primary text-invert-text px-6 py-3 tracking-wide outline-none rounded-md shadow"
 			>
 				{children}
 			</button>

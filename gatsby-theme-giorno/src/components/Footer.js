@@ -16,7 +16,7 @@ const Footer = () => {
 	const contactOptions = useSanityContactOptions();
 
 	return (
-		<footer className="text-invert-text bg-footer grid grid-cols-1 sm:grid-cols-3 gap-6 py-16 px-6 md:px-12">
+		<footer className="text-invert-text bg-footer flex flex-col sm:grid sm:grid-cols-3 gap-6 py-16 px-6 md:px-12">
 			{links?.length !== 0 ? <FooterSocialLinks links={links} /> : null}
 			{contactOptions?.title ? (
 				<FooterContact details={contactOptions} />

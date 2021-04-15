@@ -14,7 +14,7 @@ const ProjectOverview = ({ project }) => {
 					// TODO: Check if projects page is enable
 				}
 				<Link to={`/projects/${slug}`}>
-					<h2 className="text-2xl font-semibold font-serif">{name}</h2>
+					<h2 className="text-3xl font-semibold font-serif">{name}</h2>
 				</Link>
 				<p className="text-lg md:pr-16">{description}</p>
 			</div>
