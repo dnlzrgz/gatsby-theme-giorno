@@ -15,6 +15,10 @@ module.exports = {
 				footer: 'var(--color-footer)',
 			},
 		},
+		fontFamily: {
+			sans: ['var(--font-sans)'],
+			serif: ['var(--font-serif)'],
+		},
 	},
 	variants: {
 		extend: {},
