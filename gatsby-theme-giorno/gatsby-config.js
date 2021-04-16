@@ -21,29 +21,6 @@ module.exports = {
 				overlayDrafts: true,
 			},
 		},
-		{
-			resolve: `gatsby-plugin-webfonts`,
-			options: {
-				fonts: {
-					google: [
-						{
-							family: 'Archivo Black',
-							subsets: ['latin'],
-							variants: ['500', '600', '700'],
-							fontDisplay: 'swap',
-							strategy: 'selfHosted',
-						},
-						{
-							family: 'Judson',
-							subsets: ['latin'],
-							variants: ['300', '400', '500', '600'],
-							fontDisplay: 'swap',
-							strategy: 'selfHosted',
-						},
-					],
-				},
-			},
-		},
 		`gatsby-plugin-sitemap`,
 	],
 };
