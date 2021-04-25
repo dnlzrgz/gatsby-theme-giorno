@@ -2,12 +2,17 @@ export default {
 	name: 'pageBuilder',
 	title: 'Page builder',
 	type: 'array',
+	options: {
+		editModal: 'fullscreen',
+	},
 	of: [
-		{ type: 'blankHero' },
 		{ type: 'hero' },
+		{ type: 'blankHero' },
+		{ type: 'blockSection' },
 		{ type: 'gridSection' },
 		{ type: 'projectShowcase' },
-		{ type: 'blockSection' },
 		{ type: 'form' },
+		{ type: 'quote' },
 	],
+	validation: (Rule) => Rule.min(1),
 };

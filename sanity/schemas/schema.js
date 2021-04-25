@@ -31,6 +31,7 @@ import project from './project';
 import projectsConfig from './projectsConfig';
 import projectShowcase from './projectShowcase';
 import published from './published';
+import quote from './quote';
 import richContent from './richContent';
 import submit from './submit';
 import textarea from './textarea';
@@ -69,6 +70,7 @@ export default createSchema({
 		projectsConfig,
 		projectShowcase,
 		published,
+		quote,
 		richContent,
 		submit,
 		textarea,
