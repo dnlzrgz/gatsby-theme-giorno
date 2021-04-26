@@ -1,6 +1,6 @@
 export default {
-	name: 'description',
-	title: 'Description',
-	type: 'string',
-	description: 'Section text description.',
+  name: "description",
+  title: "Description",
+  type: "string",
+  description: "Section text description.",
 };

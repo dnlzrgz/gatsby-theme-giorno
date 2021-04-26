@@ -1,3 +1,3 @@
-import './src/styles/global.css';
+import "./src/styles/global.css";
 
-export { wrapPageElement } from './gatsby-browser';
+export { wrapPageElement } from "./gatsby-browser";

@@ -1,18 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import React from "react";
+import PropTypes from "prop-types";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ImageBlock = ({ image, altText }) => {
-	const assetData = getImage(image);
+  const assetData = getImage(image);
 
-	return (
-		<GatsbyImage image={assetData} alt={altText} className="object-cover" />
-	);
+  return <GatsbyImage image={assetData} alt={altText} className="object-cover" />;
 };
 
 ImageBlock.propTypes = {
-	image: PropTypes.object.isRequired,
-	altText: PropTypes.string,
+  image: PropTypes.object.isRequired,
+  altText: PropTypes.string,
 };
 
 export default ImageBlock;

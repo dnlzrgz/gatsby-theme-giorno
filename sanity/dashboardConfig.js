@@ -1,10 +1,10 @@
 export default {
-	widgets: [
-		{
-			name: 'project-info',
-		},
-		{
-			name: 'project-users',
-		},
-	],
+  widgets: [
+    {
+      name: "project-info",
+    },
+    {
+      name: "project-users",
+    },
+  ],
 };

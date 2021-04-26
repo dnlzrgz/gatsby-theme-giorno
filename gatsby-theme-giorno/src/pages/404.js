@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import SEO from '../components/SEO';
+import SEO from "../components/SEO";
 
 const NotFound = () => {
-	return (
-		<>
-			<SEO path="/404" />
-		</>
-	);
+  return (
+    <>
+      <SEO path="/404" />
+    </>
+  );
 };
 
 export default NotFound;
