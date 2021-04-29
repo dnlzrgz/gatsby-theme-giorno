@@ -26,7 +26,13 @@ export default {
       title: "Inputs",
       type: "array",
       description: "Array of inputs to create a custom form.",
-      of: [{ type: "input" }, { type: "textarea" }, { type: "submit", validation: (Rule) => Rule.required() }],
+      of: [{ type: "input" }, { type: "textarea" }],
+    },
+    {
+      name: "submit",
+      title: "Submit",
+      type: "submit",
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
