@@ -1,12 +1,29 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 import HeroTitle from "./HeroTitle";
 import HeroSubtitle from "./HeroSubtitle";
 import HeroImage from "./HeroImage";
 import CTA from "./CTA";
 
-const Hero = ({ module }) => {
+interface Props {
+  module: {
+    _key: string;
+    _type: string;
+    title: string;
+    subtitle: string;
+    whiteText: boolean;
+    cta: {
+      title: string;
+      url: string;
+    };
+    image: {
+      asset: IGatsbyImageData;
+    };
+  };
+}
+
+const Hero: FC<Props> = ({ module }) => {
   const { title, subtitle, whiteText, image, cta } = module;
 
   return (
@@ -22,10 +39,6 @@ const Hero = ({ module }) => {
       </main>
     </section>
   );
-};
-
-Hero.propTypes = {
-  module: PropTypes.object.isRequired,
 };
 
 export default Hero;

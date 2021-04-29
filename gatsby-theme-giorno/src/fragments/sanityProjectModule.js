@@ -15,7 +15,6 @@ export const query = graphql`
           slug {
             current
           }
-          _rawImage
           image {
             asset {
               gatsbyImageData(placeholder: DOMINANT_COLOR, formats: [AUTO, WEBP, AVIF])

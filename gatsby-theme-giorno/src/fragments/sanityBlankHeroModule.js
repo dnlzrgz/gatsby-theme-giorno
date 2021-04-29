@@ -9,7 +9,6 @@ export const query = graphql`
         title
         subtitle
         cta {
-          _type
           title
           url
         }

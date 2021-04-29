@@ -8,7 +8,7 @@ export const query = graphql`
         _type
         title
         description
-        _rawContent
+        rawContent: _rawContent
         content {
           children {
             _key

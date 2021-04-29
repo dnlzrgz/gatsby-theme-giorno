@@ -6,7 +6,7 @@ export const query = graphql`
       ... on SanityQuote {
         _key
         _type
-        _rawQuote
+        rawQuote: _rawQuote
         author
         quote {
           _key

@@ -5,12 +5,12 @@ import GridSection from "../components/GridSection";
 import Hero from "../components/Hero";
 import ProjectsSection from "../components/ProjectsSection";
 import Quote from "../components/Quote";
-import TextSection from "../components/TextSection";
+import BlockSection from "../components/BlockSection";
 
 const pageSerializer = new Map([
   ["blankHero", BlankHero],
   ["hero", Hero],
-  ["textSection", TextSection],
+  ["blockSection", BlockSection],
   ["gridSection", GridSection],
   ["form", FormSection],
   ["projectShowcase", ProjectsSection],

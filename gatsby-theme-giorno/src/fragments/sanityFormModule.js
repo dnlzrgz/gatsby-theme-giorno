@@ -6,7 +6,6 @@ export const query = graphql`
       ... on SanityForm {
         _key
         _type
-        _rawInputs
         name
         title
         description
@@ -28,11 +27,11 @@ export const query = graphql`
             name
             required
           }
-          ... on SanitySubmit {
-            _key
-            _type
-            text
-          }
+        }
+        submit {
+          _key
+          _type
+          text
         }
       }
     }
