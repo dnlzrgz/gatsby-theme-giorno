@@ -1,6 +1,31 @@
 import { graphql, useStaticQuery } from "gatsby";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
-const useSanityConfig = () => {
+interface ISanityConfig {
+  config: {
+    global: {
+      title: string;
+      description: {
+        _rawChildren: unknown;
+      };
+      image: {
+        asset: IGatsbyImageData;
+      };
+      siteURL: string;
+      twitterUsername?: string;
+      navbar: boolean;
+    };
+    blog: {
+      enable: boolean;
+    };
+    footer: {
+      copyright: string;
+      sitemap: boolean;
+    };
+  };
+}
+
+const useSanityConfig = (): ISanityConfig => {
   const data = useStaticQuery(graphql`
     query {
       config: sanityConfig {

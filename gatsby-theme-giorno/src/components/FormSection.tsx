@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { FormInput, FormTextarea, FormSubmit as FormSubmitType } from "../../types";
+import { IFormInput, IFormTextarea, IFormSubmit } from "../../types";
 
 import formBuilder from "../utils/formBuilder";
 import Section from "./Section";
@@ -15,8 +15,8 @@ export interface Props {
     name: string;
     title: string;
     description: string;
-    inputs: [FormInput | FormTextarea];
-    submit: FormSubmitType;
+    inputs: [IFormInput | IFormTextarea];
+    submit: IFormSubmit;
   };
 }
 const FormSection: FC<Props> = ({ module }) => {

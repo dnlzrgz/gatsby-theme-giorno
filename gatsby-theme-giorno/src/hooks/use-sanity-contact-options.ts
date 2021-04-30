@@ -1,6 +1,15 @@
 import { graphql, useStaticQuery } from "gatsby";
+import type { IContactOptionAddress, IContactOptionEmail, IContactOptionPhone } from "../../types";
 
-const useSanityContactOptions = () => {
+interface IContactOptions {
+  contactOptions: {
+    title: string;
+    description: string;
+    options: [IContactOptionAddress | IContactOptionEmail | IContactOptionPhone];
+  };
+}
+
+const useSanityContactOptions = (): IContactOptions => {
   const data = useStaticQuery(graphql`
     query {
       contactOptions: sanityContact {

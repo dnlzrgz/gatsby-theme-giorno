@@ -1,18 +1,18 @@
-export interface ContactOptionAddress {
+export interface IContactOptionAddress {
   _key: string;
   _type: string;
   title: string;
   address: string;
 }
 
-export interface ContactOptionEmail {
+export interface IContactOptionEmail {
   _key: string;
   _type: string;
   title: string;
   email: string;
 }
 
-export interface ContactOptionPhone {
+export interface IContactOptionPhone {
   _key: string;
   _type: string;
   title: string;
@@ -20,7 +20,7 @@ export interface ContactOptionPhone {
   prefix: string;
 }
 
-export interface FormInput {
+export interface IFormInput {
   _key: string;
   _type: string;
   type: string;
@@ -29,13 +29,13 @@ export interface FormInput {
   required: boolean;
 }
 
-export interface FormSubmit {
+export interface IFormSubmit {
   _key: string;
   _type: string;
   text: string;
 }
 
-export interface FormTextarea {
+export interface IFormTextarea {
   _key: string;
   _type: string;
   label: string;

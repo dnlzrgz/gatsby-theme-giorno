@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import type { ContactOptionAddress, ContactOptionEmail, ContactOptionPhone } from "../../types";
+import type { IContactOptionAddress, IContactOptionEmail, IContactOptionPhone } from "../../types";
 
 import FooterSection from "./FooterSection";
 import FooterSectionTitle from "./FooterSectionTitle";
@@ -10,7 +10,7 @@ interface Props {
   details: {
     title: string;
     description: string;
-    options: [ContactOptionAddress | ContactOptionEmail | ContactOptionPhone];
+    options: [IContactOptionAddress | IContactOptionEmail | IContactOptionPhone];
   };
 }
 const FooterContact: FC<Props> = ({ details }) => {

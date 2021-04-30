@@ -6,7 +6,7 @@ interface Props {
     email: string;
   };
 }
-const ContactOptionEmail: FC<Props> = ({ module }) => {
+const IContactOptionEmail: FC<Props> = ({ module }) => {
   const { title, email } = module;
 
   return (
@@ -18,4 +18,4 @@ const ContactOptionEmail: FC<Props> = ({ module }) => {
   );
 };
 
-export default ContactOptionEmail;
+export default IContactOptionEmail;

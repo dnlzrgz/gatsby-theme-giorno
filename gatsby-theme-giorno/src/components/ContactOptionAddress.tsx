@@ -7,7 +7,7 @@ interface Props {
   };
 }
 
-const ContactOptionAddress: FC<Props> = ({ module }) => {
+const IContactOptionAddress: FC<Props> = ({ module }) => {
   const { title, address } = module;
 
   return (
@@ -19,4 +19,4 @@ const ContactOptionAddress: FC<Props> = ({ module }) => {
   );
 };
 
-export default ContactOptionAddress;
+export default IContactOptionAddress;

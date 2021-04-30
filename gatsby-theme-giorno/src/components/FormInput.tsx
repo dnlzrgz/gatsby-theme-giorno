@@ -11,7 +11,7 @@ interface Props {
   };
 }
 
-const FormInput: FC<Props> = ({ module }) => {
+const IFormInput: FC<Props> = ({ module }) => {
   const { name, label, type, required } = module;
 
   return (
@@ -28,4 +28,4 @@ const FormInput: FC<Props> = ({ module }) => {
   );
 };
 
-export default FormInput;
+export default IFormInput;
