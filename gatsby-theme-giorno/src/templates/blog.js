@@ -10,7 +10,7 @@ const Blog = ({ data, pageContext }) => {
   return (
     <div className="h-screen flex flex-col items-center justify-center">
       {posts.map(({ node }) => (
-        <PostCard post={node} />
+        <PostCard key={node.id} post={node} />
       ))}
       <div>
         {previousPagePath ? <Link to={pageContext.previousPagePath}>Prev</Link> : null}

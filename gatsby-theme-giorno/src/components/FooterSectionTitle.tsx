@@ -5,7 +5,7 @@ export interface Props {
 }
 
 const FooterSectionTitle: FC<Props> = ({ title }) => {
-  return <h2 className="text-lg font-semibold tracking-wide mb-1">{title}</h2>;
+  return <h2 className="text-lg font-semibold tracking-wide mb-3">{title}</h2>;
 };
 
 export default FooterSectionTitle;

@@ -9,7 +9,7 @@ interface Props {
   module: {
     title: string;
     description: string;
-    rawContent: any;
+    rawContent: unknown;
   };
 }
 

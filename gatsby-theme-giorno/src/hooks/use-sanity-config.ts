@@ -2,26 +2,24 @@ import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 interface ISanityConfig {
-  config: {
-    global: {
-      title: string;
-      description: {
-        _rawChildren: unknown;
-      };
-      image: {
-        asset: IGatsbyImageData;
-      };
-      siteURL: string;
-      twitterUsername?: string;
-      navbar: boolean;
+  global: {
+    title: string;
+    description: {
+      _rawChildren: unknown;
     };
-    blog: {
-      enable: boolean;
+    image: {
+      asset: IGatsbyImageData;
     };
-    footer: {
-      copyright: string;
-      sitemap: boolean;
-    };
+    siteURL: string;
+    twitterUsername: string;
+    navbar: boolean;
+  };
+  blog: {
+    enable: boolean;
+  };
+  footer: {
+    copyright: string;
+    sitemap: boolean;
   };
 }
 

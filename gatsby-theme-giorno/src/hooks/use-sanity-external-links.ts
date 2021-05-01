@@ -8,7 +8,7 @@ interface ILinkNode {
   };
 }
 
-const useSanityExternalLinks = (): ILinkNode[] => {
+const useSanityExternalLinks = (): Array<ILinkNode> => {
   const data = useStaticQuery(graphql`
     query {
       links: allSanityExternalLinks {

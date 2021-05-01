@@ -2,11 +2,9 @@ import { graphql, useStaticQuery } from "gatsby";
 import type { IContactOptionAddress, IContactOptionEmail, IContactOptionPhone } from "../../types";
 
 interface IContactOptions {
-  contactOptions: {
-    title: string;
-    description: string;
-    options: [IContactOptionAddress | IContactOptionEmail | IContactOptionPhone];
-  };
+  title: string;
+  description: string;
+  options: [IContactOptionAddress | IContactOptionEmail | IContactOptionPhone];
 }
 
 const useSanityContactOptions = (): IContactOptions => {

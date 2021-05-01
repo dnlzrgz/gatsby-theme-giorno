@@ -1,19 +1,15 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-interface IAllPages {
-  pages: {
-    nodes: {
-      id: string;
-      title: string;
-      public: boolean;
-      slug: {
-        current: string;
-      };
-    }[];
+interface IPage {
+  id: string;
+  title: string;
+  public: boolean;
+  slug: {
+    current: string;
   };
 }
 
-const useAllPages = (): IAllPages => {
+const useAllPages = (): Array<IPage> => {
   const data = useStaticQuery(graphql`
     query {
       pages: allSanityPage(filter: { public: { eq: true }, slug: { current: { ne: "index" } } }) {
