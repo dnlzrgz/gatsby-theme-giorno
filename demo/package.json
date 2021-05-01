@@ -11,6 +11,7 @@
 		"start": "gatsby develop"
 	},
 	"dependencies": {
+		"dotenv": "^8.2.0",
 		"gatsby": "^3.0.0",
 		"gatsby-theme-giorno": "*",
 		"react": "^17.0.1",

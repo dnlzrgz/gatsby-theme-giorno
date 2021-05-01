@@ -1,12 +1,4 @@
-const path = require("path");
-require("dotenv").config({
-  path: path.resolve("../.env"),
-});
-
-module.exports = {
-  siteMetadata: {
-    siteUrl: `https://giorno-demo.netlify.app`,
-  },
+module.exports = ({ projectId, dataset, token }) => ({
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
@@ -14,9 +6,9 @@ module.exports = {
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_DATASET_NAME,
-        token: process.env.SANITY_TOKEN,
+        projectId,
+        dataset,
+        token,
         watchMode: true,
         overlayDrafts: true,
       },
@@ -24,4 +16,4 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-typescript`,
   ],
-};
+});

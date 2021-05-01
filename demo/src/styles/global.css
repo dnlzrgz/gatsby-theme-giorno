@@ -2,17 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./typography.css";
+
 @layer base {
-	:root {
-		/* COLOR THEME */
-		--color-primary: #16a34a;
-		--color-darker-primary: #15803d;
-		--color-accent: #ec4899;
-		--color-darker-accent: #db2777;
-		--color-background: #fff;
-		--color-invert-background: #1f2937;
-		--color-text: #111827;
-		--color-invert-text: #fff;
-		--color-footer: #1f2937;
-	}
+  :root {
+    /* COLOR THEME */
+    --color-primary: #3b82f6;
+    --color-darker-primary: #2563eb;
+    --color-accent: #ec4899;
+    --color-darker-accent: #db2777;
+    --color-background: #fff;
+    --color-invert-background: #1f2937;
+    --color-text: #111827;
+    --color-invert-text: #fff;
+    --color-footer: #1f2937;
+
+    /* FONTS */
+    --font-serif: "Archivo", serif;
+    --font-sans: "Open Sans", sans-serif;
+  }
 }
