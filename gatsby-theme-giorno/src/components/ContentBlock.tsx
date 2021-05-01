@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 
 import CodeBlock from "./CodeBlock";
@@ -6,6 +6,7 @@ import ImageBlock from "./ImageBlock";
 
 const serializers = {
   types: {
+    // eslint-disable-next-line react/display-name
     block: (props) => {
       switch (props.node.style) {
         case "h1":
@@ -25,7 +26,11 @@ const serializers = {
   },
 };
 
-const ContentBlock = (content) => {
+interface Props {
+  content: unknown;
+}
+
+const ContentBlock: FC<Props> = (content) => {
   return <BlockContent blocks={content.content} serializers={serializers} />;
 };
 

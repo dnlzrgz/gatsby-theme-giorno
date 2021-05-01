@@ -1,9 +1,26 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link } from "gatsby";
 
 import ContentBlock from "./ContentBlock";
 
-const PostCard = ({ post }) => {
+interface Props {
+  post: {
+    title: string;
+    publishedAt: string;
+    _rawContent: unknown[];
+    slug: {
+      current: string;
+    };
+    author: {
+      name: string;
+      slug: {
+        current: string;
+      };
+    };
+  };
+}
+
+const PostCard: FC<Props> = ({ post }) => {
   if (!post._rawContent.length) return null;
 
   return (
