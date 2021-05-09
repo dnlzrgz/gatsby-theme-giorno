@@ -26,6 +26,7 @@ const SEO: FC<Props> = ({ title, path = "", description, image }) => {
 
   return (
     <Helmet>
+      <html lang="en" />
       <title>{seo.title}</title>
       <link rel="canonical" href={seo.url} />
       <meta name="description" content={seo.description} />

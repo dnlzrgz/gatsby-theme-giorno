@@ -11,16 +11,14 @@
 		"start": "gatsby develop"
 	},
 	"dependencies": {
-		"dotenv": "^8.2.0",
-		"gatsby": "^3.0.0",
-		"gatsby-theme-giorno": "*",
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1"
-	},
-	"devDependencies": {
 		"autoprefixer": "^10.2.5",
-		"gatsby-plugin-postcss": "^4.2.0",
-		"postcss": "^8.2.10",
-		"tailwindcss": "^2.1.1"
+		"dotenv": "^8.2.0",
+		"gatsby-plugin-postcss": "^4.4.0",
+		"gatsby-theme-giorno": "*",
+		"gatsby": "^3.0.0",
+		"postcss": "^8.2.13",
+		"react-dom": "^17.0.1",
+		"react": "^17.0.1",
+		"tailwindcss": "^2.1.2"
 	}
 }

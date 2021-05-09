@@ -1,7 +1,6 @@
 module.exports = ({ projectId, dataset, token }) => ({
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-sanity",
@@ -11,6 +10,12 @@ module.exports = ({ projectId, dataset, token }) => ({
         token,
         watchMode: true,
         overlayDrafts: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
       },
     },
     `gatsby-plugin-sitemap`,
