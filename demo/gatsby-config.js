@@ -5,7 +5,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://giorno-demo.netlify.app`,
+    siteUrl: "https://giorno-demo.netlify.app",
   },
   plugins: [
     {
@@ -17,5 +17,18 @@ module.exports = {
       },
     },
     "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "Gatsby Giorno Theme",
+        short_name: "Giorno",
+        icon: "./src/images/favicon.png",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#3b82f6",
+        display: "standalone",
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 };
