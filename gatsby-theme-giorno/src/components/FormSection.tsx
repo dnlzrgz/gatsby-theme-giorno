@@ -39,7 +39,7 @@ const FormSection: FC<Props> = ({ module }) => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={onSubmit}
-          className="flex justify-center mt-6 md:mt-9"
+          className="flex justify-center mt-9"
         >
           <div className="flex flex-col flex-grow gap-6 md:gap-9 max-w-xl">
             <input type="hidden" name="bot-field" />

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-const FormInputLabelRequired: FC = () => <span className="text-base">(required)</span>;
+const FormInputLabelRequired: FC = () => <span className="text-base">*</span>;
 
 interface Props {
   label: string;
