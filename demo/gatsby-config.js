@@ -22,13 +22,13 @@ module.exports = {
       options: {
         name: "Gatsby Giorno Theme",
         short_name: "Giorno",
-        icon: "./src/images/favicon.png",
+        icon: "src/images/favicon.png",
         start_url: "/",
         background_color: "#fff",
         theme_color: "#3b82f6",
         display: "standalone",
       },
     },
-    "gatsby-plugin-offline",
+    "gatsby-plugin-remove-serviceworker",
   ],
 };

@@ -14,6 +14,10 @@ module.exports = {
         "invert-text": "#fff",
         footer: "#1f2937",
       },
+      fontFamily: {
+        serif: "var(--font-serif)",
+        sans: "var(--font-sans)",
+      },
     },
   },
   variants: {
