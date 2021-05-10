@@ -7,6 +7,11 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://giorno-demo.netlify.app",
   },
+  flags: {
+    FAST_DEV: true,
+    FAST_REFRESH: true,
+    PRESERVE_WEBPACK_CACHE: true,
+  },
   plugins: [
     {
       resolve: "gatsby-theme-giorno",

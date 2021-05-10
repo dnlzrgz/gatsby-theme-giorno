@@ -4,8 +4,6 @@
     "clean": "yarn workspace demo clean",
     "start": "yarn workspace demo start",
     "build": "yarn workspace demo build",
-    "theme:start": "yarn workspace gatsby-theme-giorno start",
-    "theme:clean": "yarn workspace gatsby-theme-giorno clean",
     "sanity:api": "yarn workspace sanity api",
     "sanity:start": "yarn workspace sanity start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
