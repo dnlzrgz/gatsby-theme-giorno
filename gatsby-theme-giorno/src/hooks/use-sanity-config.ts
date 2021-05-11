@@ -17,6 +17,9 @@ interface ISanityConfig {
   blog: {
     enable: boolean;
   };
+  projects: {
+    enable: boolean;
+  };
   footer: {
     copyright: string;
     sitemap: boolean;
@@ -42,6 +45,9 @@ const useSanityConfig = (): ISanityConfig => {
           navbar
         }
         blog: blogConfig {
+          enable
+        }
+        projects: projectsConfig {
           enable
         }
         footer: footerConfig {
