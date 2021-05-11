@@ -8,8 +8,6 @@ import CTA from "./CTA";
 
 interface Props {
   module: {
-    _key: string;
-    _type: string;
     title: string;
     subtitle: string;
     whiteText: boolean;
@@ -28,7 +26,10 @@ const Hero: FC<Props> = ({ module }) => {
 
   return (
     <section className="grid grid-rows-1 grid-cols-1 items-center">
-      <header className={`${whiteText ? "text-white" : "text-gray-900"} z-10`} style={{ gridArea: "1/1" }}>
+      <header
+        className={`${whiteText ? "text-white" : "text-gray-900"} z-10 flex flex-col items-center`}
+        style={{ gridArea: "1/1" }}
+      >
         <HeroTitle>{title}</HeroTitle>
         {subtitle ? <HeroSubtitle>{subtitle}</HeroSubtitle> : null}
         {cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}

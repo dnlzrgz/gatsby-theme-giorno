@@ -10,7 +10,7 @@ const FormSubmit: FC<Props> = ({ onSubmit, children }) => {
       <button
         type="submit"
         onClick={onSubmit}
-        className="text-md font-medium uppercase bg-primary hover:bg-darker-primary text-invert-text px-6 py-3 tracking-wide outline-none rounded-md shadow"
+        className="text-lg bg-primary hover:bg-darker-primary text-invert-text px-9 py-3  outline-none rounded shadow"
       >
         {children}
       </button>

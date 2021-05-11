@@ -6,8 +6,6 @@ import CTA from "./CTA";
 
 interface Props {
   module: {
-    _key: string;
-    _type: string;
     title: string;
     subtitle: string;
     cta?: {
