@@ -10,6 +10,7 @@
     "lint:fix": "yarn lint --fix",
     "lint:ts": "tsc"
   },
+  "license": "GPL-3.0",
   "workspaces": [
     "gatsby-theme-giorno",
     "sanity",

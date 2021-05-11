@@ -1,8 +1,8 @@
 {
-  "name": "sanity",
+  "name": "giorno-sanity",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.4.0",
+  "description": "Sanity studio for Giorno.",
   "main": "package.json",
   "author": "Danielkvist <daniel@dkvist.com>",
   "license": "MIT",
@@ -29,6 +29,5 @@
     "react-dom": "^17.0",
     "react-icons": "^4.1.0",
     "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
-  },
-  "devDependencies": {}
+  }
 }
