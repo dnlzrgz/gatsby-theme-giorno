@@ -4,8 +4,8 @@
     "clean": "yarn workspace demo clean",
     "start": "yarn workspace demo start",
     "build": "yarn workspace demo build",
-    "sanity:api": "yarn workspace studio api",
-    "sanity:start": "yarn workspace studio start",
+    "studio:api": "yarn workspace studio api",
+    "studio:start": "yarn workspace studio start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "yarn lint --fix",
     "lint:ts": "tsc"
@@ -13,7 +13,7 @@
   "license": "GPL-3.0",
   "workspaces": [
     "gatsby-theme-giorno",
-    "studio",
+    "template/*",
     "demo"
   ],
   "devDependencies": {
