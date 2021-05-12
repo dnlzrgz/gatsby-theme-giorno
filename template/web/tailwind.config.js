@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/gatsby-theme-giorno/src/**/*.{js,jsx,ts,tsx}"],
+  purge: false,
   darkMode: false,
   theme: {
     extend: {

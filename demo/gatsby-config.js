@@ -21,7 +21,12 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
       },
     },
-    "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -34,6 +39,5 @@ module.exports = {
         display: "standalone",
       },
     },
-    "gatsby-plugin-remove-serviceworker",
   ],
 };
