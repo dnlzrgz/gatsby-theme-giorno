@@ -1,5 +1,7 @@
 # Giorno - A modern theme for Gatsby
 
+## Features
+
 - Gatsby Theme powered by [Sanity](https://www.sanity.io/).
 - Sanity template using [Sanity create](https://www.sanity.io/create?template=danielkvist%2Fsanity-template-gatsby-portfolio).
 - Responsive design.
@@ -11,7 +13,7 @@
 
 ## Why?
 
-Building and updating a site using Gatsby is incredible, but only if you are a developer familiarized with React & GraphQL. Giorno let's you have the best part of Gatsby and the JAMStack leaving much of the heavy lifting to Sanity.
+Building and updating a site using Gatsby is incredible easy and fast, but only if you are a developer familiarized with React & GraphQL. Giorno let's you have the best part of Gatsby and the JAMStack leaving much of the heavy lifting to Sanity.
 
 Thanks to this you will be able to create and configure pages as you wish by adding or removing different blocks that will then be rendered by Gatsby.
 
@@ -19,18 +21,32 @@ Thanks to this you will be able to create and configure pages as you wish by add
 
 Giorno is under active development so things can break or change until the project reaches the version `v1.0.0`. Please, until then use it with caution.
 
+## Sanity create
+
+The best and easiest way to start working with Giorno is by using the [Sanity create template](https://www.sanity.io/create?template=danielkvist%2Fsanity-template-gatsby-portfolio).
+
+If you want to know more about how to work with Sanity create or how to work whit this template itself, please check the [README](https://github.com/danielkvist/sanity-template-gatsby-portfolio#readme) in the [saniyt-template-gatsby-portfolio](https://github.com/danielkvist/sanity-template-gatsby-portfolio) repository.
+
 ## Installation
 
-To starting using Giorno run:
+If you don't want to use the Sanity template you can install the `gatsby-theme-giorno` independently by running:
 
 ```shell
+# NPM
 npm install gatsby-theme-giorno
+
+# Yarn
+yarn add gatbsy-theme-giorno
 ```
 
 Then we need to install and configure Tailwind CSS:
 
 ```shell
+# NPM
 npm install gatsby-plugin-postcss tailwindcss@latest postcss@latest autoprefixer@latest
+
+# Yarn
+yarn add gatsby-plugin-postcss tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
 And then add the `tailwind.config.js` and the `postcss.config.js` files by running:
@@ -91,9 +107,9 @@ The `invert-*` colors are used when the `dark mode` is enabled. To learn more ab
 
 > Check the [demo's config files](https://github.com/danielkvist/gatsby-theme-giorno/tree/main/demo) if you have any doubts.
 
-## Sanity
+## Sanity studio
 
-## Sanity create
+As I have already pointed out, the best way to use Giorno is by creating a project using the [Sanity create template](https://www.sanity.io/create?template=danielkvist%2Fsanity-template-gatsby-portfolio). But if you are using an existing Gatsby project and you have installed the `gatsby-theme-giorno` independently you should know that you'll need to use the Sanity studio created for this project that is currently being developed in the [sanity-template-gatsby-portfolio](https://github.com/danielkvist/sanity-template-gatsby-portfolio/tree/master/template/studio) repository.
 
 ## What's next?
 
