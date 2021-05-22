@@ -1,6 +1,7 @@
 # Giorno - A modern theme for Gatsby
 
 - Gatsby Theme powered by [Sanity](https://www.sanity.io/).
+- Sanity template using [Sanity create](https://www.sanity.io/create?template=danielkvist%2Fsanity-template-gatsby-portfolio).
 - Responsive design.
 - Great SEO.
 - Developed with accessibility in mind.
@@ -50,10 +51,14 @@ In your `gatsby-config.js` file, under `plugins` add:
   options: {
     projectId: SANITY_PROJECT_ID,
     dataset: SANITY_DATASET_NAME,
-    token: SANITY_TOKEN,
   },
 },
-"gatsby-plugin-postcss",
+{
+  resolve: `gatsby-plugin-postcss`,
+  options: {
+    postCssPlugins: [require("tailwindcss"), require("autoprefixer")],
+  },
+},
 ```
 
 Now, on the `tailwind.config.js` file in the root of your project you have to extend a little the base tailwind configuration as follows (you can also just copy and paste):
@@ -86,10 +91,13 @@ The `invert-*` colors are used when the `dark mode` is enabled. To learn more ab
 
 > Check the [demo's config files](https://github.com/danielkvist/gatsby-theme-giorno/tree/main/demo) if you have any doubts.
 
+## Sanity
+
+## Sanity create
+
 ## What's next?
 
 I am currently working on:
 
 - Blogging.
-- A Sanity starter.
 - More blocks.

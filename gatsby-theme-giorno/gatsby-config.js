@@ -1,4 +1,4 @@
-module.exports = ({ projectId, dataset, token }) => ({
+module.exports = ({ projectId, dataset }) => ({
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
@@ -7,9 +7,7 @@ module.exports = ({ projectId, dataset, token }) => ({
       options: {
         projectId,
         dataset,
-        token,
         watchMode: true,
-        overlayDrafts: true,
       },
     },
     `gatsby-plugin-sitemap`,

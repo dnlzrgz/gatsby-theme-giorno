@@ -1,20 +1,19 @@
 {
   "private": true,
   "scripts": {
-    "clean": "yarn workspace demo clean",
-    "start": "yarn workspace demo start",
-    "build": "yarn workspace demo build",
-    "studio:api": "yarn workspace studio api",
-    "studio:start": "yarn workspace studio start",
+    "demo:clean": "yarn workspace demo clean",
+    "demo:start": "yarn workspace demo start",
+    "demo:build": "yarn workspace demo build",
+    "studio:api": "yarn workspace template/studio api",
+    "studio:start": "yarn workspace template/studio start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "yarn lint --fix",
     "lint:ts": "tsc"
   },
   "license": "GPL-3.0",
   "workspaces": [
-    "gatsby-theme-giorno",
-    "template/*",
-    "demo"
+    "demo",
+    "gatsby-theme-giorno"
   ],
   "devDependencies": {
     "@types/node": "^14.14.41",
