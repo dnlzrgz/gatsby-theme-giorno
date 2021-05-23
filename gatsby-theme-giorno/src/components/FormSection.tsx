@@ -7,6 +7,7 @@ import SectionHeader from "./SectionHeader";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
 import FormSubmit from "./FormSubmit";
+import PlainContent from "./PlainContent";
 
 export interface Props {
   module: {
@@ -14,7 +15,7 @@ export interface Props {
     _type: string;
     name: string;
     title: string;
-    description: string;
+    description: unknown;
     inputs: [IFormInput | IFormTextarea];
     submit: IFormSubmit;
   };
@@ -30,7 +31,9 @@ const FormSection: FC<Props> = ({ module }) => {
     <Section>
       <SectionHeader>
         <SectionTitle>{title}</SectionTitle>
-        {description ? <SectionDescription>{description}</SectionDescription> : null}
+        <SectionDescription>
+          <PlainContent content={description} />
+        </SectionDescription>
       </SectionHeader>
       <main>
         <form

@@ -30,19 +30,19 @@ const Hero: FC<Props> = ({ module }) => {
     <section className="grid grid-rows-1 grid-cols-1 items-center">
       <header className={`${whiteText ? "text-white" : "text-gray-900"} z-10`} style={{ gridArea: "1/1" }}>
         <div
-          className={`px-8 md:px-32 ${
+          className={`px-8 md:px-32 flex flex-col ${
             textAlignment === "center"
-              ? "text-center"
+              ? "text-center items-center"
               : textAlignment === "left"
-              ? "text-left pr-8 sm:pr-16 md:pr-32 lg:pr-72"
-              : "text-right pr-8 sm:pr-16 md:pr-32 lg:pr-72"
+              ? "text-left items-start mr-8 sm:mr-16 md:mr-20 lg:mr-96"
+              : "text-right items-end mr-8 sm:mr-16 md:mr-20 lg:ml-96"
           }`}
         >
           <HeroTitle>{title}</HeroTitle>
           <HeroSubtitle>
             <PlainContent content={description} />
           </HeroSubtitle>
-          {cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}
+          <div>{cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}</div>
         </div>
       </header>
 

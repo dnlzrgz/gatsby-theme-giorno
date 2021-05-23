@@ -6,22 +6,25 @@ import SectionHeader from "./SectionHeader";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
 import ProjectOverview from "./ProjectOverview";
+import PlainContent from "./PlainContent";
 
 interface Props {
   module: {
     _key: string;
     _type: string;
     title: string;
-    description: string;
+    description: unknown;
     projects: {
       _id: string;
       name: string;
-      description: string;
+      description: unknown;
       slug: {
         current: string;
       };
       image: {
-        asset: IGatsbyImageData;
+        asset: {
+          gatsbyImageData: IGatsbyImageData;
+        };
       };
     }[];
   };
@@ -34,9 +37,13 @@ const ProjectsSection: FC<Props> = ({ module }) => {
     <Section>
       <SectionHeader>
         <SectionTitle>{title}</SectionTitle>
-        {description ? <SectionDescription>{description}</SectionDescription> : null}
+        <div className="pr-8 sm:pr-16 md:pr-32 lg:pr-72">
+          <SectionDescription>
+            <PlainContent content={description} />
+          </SectionDescription>
+        </div>
       </SectionHeader>
-      <main className="py-12 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16">
+      <main className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16">
         {projects.map((project) => {
           return <ProjectOverview key={project._id} project={project} />;
         })}

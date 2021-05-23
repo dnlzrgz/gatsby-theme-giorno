@@ -9,6 +9,7 @@ interface Props {
   module: {
     title: string;
     description: unknown;
+    textAlignment: string;
     cta?: {
       title: string;
       url: string;
@@ -17,17 +18,25 @@ interface Props {
 }
 
 const BlankHero: FC<Props> = ({ module }) => {
-  const { title, description, cta } = module;
+  const { title, description, textAlignment, cta } = module;
 
   return (
-    <section className="h-screen grid grid-rows-1 grid-cols-1 items-center">
+    <section className="grid grid-rows-1 grid-cols-1 items-center py-32 sm:py-40">
       <header className="text-gray-900 z-10" style={{ gridArea: "1/1" }}>
-        <div className="px-6 md:px-24 flex flex-col items-center">
+        <div
+          className={`px-8 md:px-32 flex flex-col ${
+            textAlignment === "center"
+              ? "text-center items-center"
+              : textAlignment === "left"
+              ? "text-left items-start mr-8 sm:mr-16 md:mr-20 lg:mr-96"
+              : "text-right items-end mr-8 sm:mr-16 md:mr-20 lg:ml-96"
+          }`}
+        >
           <HeroTitle>{title}</HeroTitle>
           <HeroSubtitle>
             <PlainContent content={description} />
           </HeroSubtitle>
-          {cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}
+          <div>{cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}</div>
         </div>
       </header>
     </section>

@@ -4,11 +4,12 @@ import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
 import ContentBlock from "./ContentBlock";
+import PlainContent from "./PlainContent";
 
 interface Props {
   module: {
     title: string;
-    description: string;
+    description: unknown;
     rawContent: unknown;
   };
 }
@@ -20,9 +21,11 @@ const BlockSection: FC<Props> = ({ module }) => {
     <Section>
       <header>
         <SectionTitle>{title}</SectionTitle>
-        {description && <SectionDescription>{description}</SectionDescription>}
+        <SectionDescription>
+          <PlainContent content={description} />
+        </SectionDescription>
       </header>
-      <main className="flex flex-col items-center justify-items-center">
+      <main className="flex flex-col items-center mt-12">
         <ContentBlock content={content} />
       </main>
     </Section>
