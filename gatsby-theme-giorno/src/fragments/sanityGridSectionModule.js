@@ -6,8 +6,6 @@ export const query = graphql`
       ... on SanityGridSection {
         _key
         _type
-        _rawInternalLink
-        _rawItems
         title
         description {
           _rawChildren
@@ -19,17 +17,26 @@ export const query = graphql`
             text
           }
         }
-        internalLink {
+        url {
           _key
           _type
-          href
           title
+          url
         }
         items {
           _key
           _type
-          content
           title
+          description {
+            _rawChildren
+            _type
+            children {
+              _key
+              _type
+              marks
+              text
+            }
+          }
         }
       }
     }
