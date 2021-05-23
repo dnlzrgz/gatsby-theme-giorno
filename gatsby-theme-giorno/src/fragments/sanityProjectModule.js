@@ -7,11 +7,29 @@ export const query = graphql`
         _key
         _type
         title
-        description
+        description {
+          _rawChildren
+          _type
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+        }
         projects {
           _id
           name
-          description
+          description {
+            _rawChildren
+            _type
+            children {
+              _key
+              _type
+              marks
+              text
+            }
+          }
           slug {
             current
           }

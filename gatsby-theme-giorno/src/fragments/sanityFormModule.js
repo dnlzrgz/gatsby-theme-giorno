@@ -8,7 +8,16 @@ export const query = graphql`
         _type
         name
         title
-        description
+        description {
+          _rawChildren
+          _type
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+        }
         inputs {
           ... on SanityInput {
             _key

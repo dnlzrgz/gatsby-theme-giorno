@@ -9,7 +9,16 @@ export const query = graphql`
         _rawInternalLink
         _rawItems
         title
-        description
+        description {
+          _rawChildren
+          _type
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+        }
         internalLink {
           _key
           _type

@@ -7,7 +7,17 @@ export const query = graphql`
         _key
         _type
         title
-        subtitle
+        description {
+          _rawChildren
+          _type
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+        }
+        textAlignment
         cta {
           title
           url

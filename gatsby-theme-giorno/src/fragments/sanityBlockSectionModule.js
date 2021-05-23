@@ -7,7 +7,16 @@ export const query = graphql`
         _key
         _type
         title
-        description
+        description {
+          _rawChildren
+          _type
+          children {
+            _key
+            _type
+            marks
+            text
+          }
+        }
         rawContent: _rawContent
         content {
           children {
