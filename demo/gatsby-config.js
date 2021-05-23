@@ -11,6 +11,7 @@ module.exports = {
     FAST_DEV: true,
     FAST_REFRESH: true,
     PRESERVE_WEBPACK_CACHE: true,
+    PARALLEL_SOURCING: true,
   },
   plugins: [
     {

@@ -41,6 +41,7 @@ node_modules/
 */public/
 
 # Sanity
+studio/
 dist/
 build/
 
