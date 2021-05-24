@@ -5,8 +5,8 @@ interface Props {
 }
 const FooterCopyright: FC<Props> = ({ copy }) => {
   return (
-    <section className="col-span-3">
-      <main className="text-center px-12">
+    <section className="col-span-3 w-full">
+      <main className="text-center text-xl px-12">
         <p>Copyright &copy; - {copy}</p>
       </main>
     </section>

@@ -16,11 +16,12 @@ const FooterSitemap: FC = () => {
   if (!pages.length) return null;
   return (
     <FooterSection>
-      <header className="text-lg font-semibold">
-        <Link to="/sitemap.xml">
+      <header>
+        <Link to="/sitemap.xml" className="text-xl">
           <FooterSectionTitle title="Sitemap" />
         </Link>
       </header>
+
       <FooterSectionMain>
         <Link key={"home"} to="/">
           Home

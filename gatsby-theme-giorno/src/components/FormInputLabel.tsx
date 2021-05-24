@@ -10,7 +10,7 @@ interface Props {
 
 const FormInputLabel: FC<Props> = ({ label, required, forInput }) => {
   return (
-    <label key={forInput} htmlFor={forInput} className="block text-lg">
+    <label key={forInput} htmlFor={forInput} className="block text-xl font-medium">
       {label} {required && <FormInputLabelRequired />}
     </label>
   );

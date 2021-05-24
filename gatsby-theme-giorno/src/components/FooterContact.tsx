@@ -22,7 +22,9 @@ const FooterContact: FC<Props> = ({ details }) => {
         <FooterSectionTitle title={title} />
         {description ? <p>{description}</p> : null}
       </header>
-      <FooterSectionMain>{footerContactBuilder(options)}</FooterSectionMain>
+      <div className="max-w-prose">
+        <FooterSectionMain>{footerContactBuilder(options)}</FooterSectionMain>
+      </div>
     </FooterSection>
   );
 };
