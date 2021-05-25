@@ -13,6 +13,7 @@ interface Props {
     cta?: {
       title: string;
       url: string;
+      external: boolean;
     };
   };
 }
@@ -36,7 +37,9 @@ const BlankHero: FC<Props> = ({ module }) => {
           <HeroSubtitle>
             <PlainContent content={description} />
           </HeroSubtitle>
-          <div>{cta && cta.title ? <CTA title={cta.title} url={cta.url} /> : null}</div>
+          <div>
+            {cta && cta.title && cta.url ? <CTA title={cta.title} url={cta.url} external={cta.external} /> : null}
+          </div>
         </div>
       </header>
     </section>
