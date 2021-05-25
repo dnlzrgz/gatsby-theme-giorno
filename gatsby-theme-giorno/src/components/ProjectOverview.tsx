@@ -36,10 +36,10 @@ const ProjectOverview: FC<Props> = ({ project }) => {
         <div className="mt-2">
           {enable ? (
             <Link to={`/projects/${slug}`}>
-              <h2 className="text-3xl font-semibold font-serif mb-4">{name}</h2>
+              <h2 className="text-2xl sm:text-3xl font-serif font-semibold mb-3">{name}</h2>
             </Link>
           ) : (
-            <h2 className="text-3xl font-semibold font-serif mb-4">{name}</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold font-serif mb-3">{name}</h2>
           )}
         </div>
       </header>
