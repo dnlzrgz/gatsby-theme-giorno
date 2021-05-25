@@ -5,6 +5,7 @@ import Section from "./Section";
 import SectionHeader from "./SectionHeader";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
+import SectionLink from "./SectionLink";
 import ProjectOverview from "./ProjectOverview";
 import PlainContent from "./PlainContent";
 
@@ -14,6 +15,11 @@ interface Props {
     _type: string;
     title: string;
     description: unknown;
+    url: {
+      title: string;
+      url: string;
+      external: boolean;
+    };
     projects: {
       _id: string;
       name: string;
@@ -31,7 +37,7 @@ interface Props {
 }
 
 const ProjectsSection: FC<Props> = ({ module }) => {
-  const { title, description, projects } = module;
+  const { title, description, url, projects } = module;
 
   return (
     <Section>
@@ -41,6 +47,7 @@ const ProjectsSection: FC<Props> = ({ module }) => {
           <SectionDescription>
             <PlainContent content={description} />
           </SectionDescription>
+          <SectionLink url={url} />
         </div>
       </SectionHeader>
       <main className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-16">

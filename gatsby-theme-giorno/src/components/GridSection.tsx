@@ -4,17 +4,18 @@ import Section from "./Section";
 import SectionHeader from "./SectionHeader";
 import SectionTitle from "./SectionTitle";
 import SectionDescription from "./SectionDescription";
+import SectionLink from "./SectionLink";
 import GridItem from "./GridItem";
 import PlainContent from "./PlainContent";
-import CTA from "./CTA";
 
 interface Props {
   module: {
     title: string;
     description: unknown;
-    url?: {
+    url: {
       title: string;
       url: string;
+      external: boolean;
     };
     items: {
       _key: string;
@@ -29,17 +30,13 @@ const GridSection: FC<Props> = ({ module }) => {
 
   return (
     <Section>
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-24">
+      <div className="grid grid-cols-1 xl:grid-cols-2 lg:gap-24">
         <SectionHeader>
           <SectionTitle>{title}</SectionTitle>
           <SectionDescription>
             <PlainContent content={description} />
           </SectionDescription>
-          {url && url?.title && url?.url ? (
-            <div className="flex items-start">
-              <CTA title={url.title} url={url.url} />
-            </div>
-          ) : null}
+          <SectionLink url={url} />
         </SectionHeader>
         <main className="flex items-center justify-center sm:py-12 lg:py-0">
           <div className="grid grid-cols-1 mt-12 md:mt-0 sm:grid-cols-2 gap-12">
