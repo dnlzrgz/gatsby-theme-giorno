@@ -8,6 +8,7 @@ export const query = graphql`
     ...SanityGridSectionModule
     ...SanityHeroModule
     ...SanityProjectModule
+    ...SanityCodepenModule
     ...SanityQuoteModule
   }
 `;

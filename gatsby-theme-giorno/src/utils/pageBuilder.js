@@ -4,6 +4,7 @@ import FormSection from "../components/FormSection";
 import GridSection from "../components/GridSection";
 import Hero from "../components/Hero";
 import ProjectsSection from "../components/ProjectsSection";
+import CodepenSection from "../components/CodepenSection";
 import Quote from "../components/Quote";
 import BlockSection from "../components/BlockSection";
 
@@ -14,6 +15,7 @@ const pageSerializer = new Map([
   ["gridSection", GridSection],
   ["form", FormSection],
   ["projectShowcase", ProjectsSection],
+  ["codepenShowcase", CodepenSection],
   ["quote", Quote],
 ]);
 
