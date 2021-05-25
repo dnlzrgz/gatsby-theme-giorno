@@ -20,6 +20,8 @@ export const query = graphql`
         whiteText
         textAlignment
         cta {
+          _type
+          external
           title
           url
         }

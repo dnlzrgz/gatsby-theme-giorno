@@ -17,6 +17,12 @@ export const query = graphql`
             text
           }
         }
+        url {
+          _type
+          external
+          title
+          url
+        }
         projects {
           _id
           name

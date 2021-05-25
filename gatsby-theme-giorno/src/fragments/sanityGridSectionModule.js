@@ -18,8 +18,8 @@ export const query = graphql`
           }
         }
         url {
-          _key
           _type
+          external
           title
           url
         }
