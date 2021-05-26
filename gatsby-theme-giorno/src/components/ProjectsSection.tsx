@@ -43,7 +43,7 @@ const ProjectsSection: FC<Props> = ({ module }) => {
     <Section>
       <SectionHeader>
         <SectionTitle>{title}</SectionTitle>
-        <div className="pr-8 sm:pr-16 md:pr-32 lg:pr-72">
+        <div className="sm:pr-16 md:pr-32 lg:pr-72">
           <SectionDescription>
             <PlainContent content={description} />
           </SectionDescription>

@@ -23,7 +23,7 @@ const CodepenEmbed: FC<Props> = ({ url }) => {
       src={embedUrl}
       frameBorder="no"
       loading="lazy"
-      data-zoom={0.5}
+      data-zoom="0.5"
       allowFullScreen
     ></iframe>
   );

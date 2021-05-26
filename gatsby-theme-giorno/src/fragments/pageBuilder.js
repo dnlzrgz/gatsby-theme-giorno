@@ -9,6 +9,7 @@ export const query = graphql`
     ...SanityHeroModule
     ...SanityProjectModule
     ...SanityCodepenModule
+    ...SanityCodeSectionModule
     ...SanityQuoteModule
   }
 `;
