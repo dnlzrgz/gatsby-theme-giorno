@@ -30,7 +30,7 @@ const ProjectOverview: FC<Props> = ({ project }) => {
   return (
     <article className="mb-6">
       <header>
-        <div className="h-auto max-w-3xl">
+        <div className="h-auto max-w-3xl relative">
           <ImageBlock image={image.asset.gatsbyImageData} altText={name} />
         </div>
         <div className="mt-2">
@@ -43,10 +43,8 @@ const ProjectOverview: FC<Props> = ({ project }) => {
           )}
         </div>
       </header>
-      <main>
-        <p className="text-xl max-w-prose">
-          <PlainContent content={description} />
-        </p>
+      <main className="text-xl max-x-prose">
+        <PlainContent content={description} />
       </main>
     </article>
   );
