@@ -8,8 +8,7 @@ interface Props {
 
 const ImageBlock: FC<Props> = ({ image, altText }) => {
   const assetData = getImage(image);
-
-  return <GatsbyImage image={assetData} alt={altText} className="object-cover" />;
+  return <GatsbyImage image={assetData} alt={altText} />;
 };
 
 export default ImageBlock;

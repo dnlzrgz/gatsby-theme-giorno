@@ -35,8 +35,8 @@ const Hero: FC<Props> = ({ module }) => {
             textAlignment === "center"
               ? "text-center items-center"
               : textAlignment === "left"
-              ? "text-left items-start mr-8 sm:mr-16 md:mr-20 lg:mr-96"
-              : "text-right items-end mr-8 sm:mr-16 md:mr-20 lg:ml-96"
+              ? "text-left items-start mr-8 sm:mr-16 md:mr-20"
+              : "text-right items-end mr-8 sm:mr-16 md:mr-20"
           }`}
         >
           <HeroTitle>{title}</HeroTitle>
