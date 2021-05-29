@@ -1,5 +1,8 @@
-module.exports = ({ projectId, dataset }) => ({
+const isDev = process.env.NODE_ENV === "development";
+
+module.exports = ({ projectId, dataset, enablePreact = false }) => ({
   plugins: [
+    enablePreact ? "gatsby-plugin-preact" : "",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     {
@@ -7,10 +10,10 @@ module.exports = ({ projectId, dataset }) => ({
       options: {
         projectId,
         dataset,
-        watchMode: true,
+        watchMode: isDev,
       },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-typescript`,
-  ],
+  ].filter(Boolean),
 });

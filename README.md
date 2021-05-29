@@ -1,5 +1,10 @@
 # Giorno - A modern theme for Gatsby
 
+![Netlify](https://img.shields.io/netlify/ff2d155e-966c-4aaa-b29c-e06fff1c2332?style=flat-square)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/danielkvist/gatsby-theme-giorno?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/danielkvist/gatsby-theme-giorno?style=flat-square)
+![GitHub](https://img.shields.io/github/license/danielkvist/gatsby-theme-giorno?style=flat-square)
+
 ## Features
 
 - Gatsby Theme powered by [Sanity](https://www.sanity.io/).
@@ -8,6 +13,7 @@
 - Great SEO.
 - Developed with accessibility in mind.
 - Customisable styles and easy theming thanks to [Tailwind CSS](https://tailwindcss.com/).
+- Support for [Preact](https://preactjs.com/) for an optional little boost in performance.
 - Demo at https://giorno-demo.netlify.app/
 - Made by [Danielkvist](https://dkvist.com/).
 
@@ -22,6 +28,8 @@ Thanks to this you will be able to create and configure pages as you wish by add
 Giorno is under active development so things can break or change until the project reaches the version `v1.0.0`. Please, until then use it with caution.
 
 ## Sanity create
+
+> The Sanity create template for Giorno is in development. Please, keep it in mind if your experiment any errors while using it.
 
 The best and easiest way to start working with Giorno is by using the [Sanity create template](https://www.sanity.io/create?template=danielkvist%2Fsanity-template-gatsby-portfolio).
 
@@ -67,6 +75,7 @@ In your `gatsby-config.js` file, under `plugins` add:
   options: {
     projectId: SANITY_PROJECT_ID,
     dataset: SANITY_DATASET_NAME,
+    enablePreact: true,
   },
 },
 {
@@ -111,9 +120,18 @@ The `invert-*` colors are used when the `dark mode` is enabled. To learn more ab
 
 As I have already pointed out, the best way to use Giorno is by creating a project using the [Sanity create template](https://www.sanity.io/create?template=danielkvist%2Fsanity-template-gatsby-portfolio). But if you are using an existing Gatsby project and you have installed the `gatsby-theme-giorno` independently you should know that you'll need to use the Sanity studio created for this project that is currently being developed in the [sanity-template-gatsby-portfolio](https://github.com/danielkvist/sanity-template-gatsby-portfolio/tree/master/template/studio) repository.
 
+## Preact & Performance
+
+Preact is a lightweight alternative to React. This means less JavaScript to download, parse and execute. But Preact is also compatible with the React ecosystem, so if you decide to enable Preact in your project you should experience any problems.
+
+The only thing you should keep in mind if that if you decide to enable Preact and you already have an existing cache of your project using React you may experiment some problems. So before enabling or disabling Preact I recommend you to remove your existing build cache.
+
+> Check this article for more information: [Speed up your Gatsby site with 1 line of code](https://hdoro.dev/speed-up-gatsby-site)
+
 ## What's next?
 
 I am currently working on:
 
+- Improve performance.
 - Blogging.
 - More blocks.
