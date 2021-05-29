@@ -19,7 +19,7 @@ interface Props {
     };
     code: {
       language: string;
-      code: unknown;
+      code: string;
     };
   };
 }

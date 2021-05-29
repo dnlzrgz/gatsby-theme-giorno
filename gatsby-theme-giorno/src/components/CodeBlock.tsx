@@ -5,7 +5,7 @@ import { dracula as style } from "react-syntax-highlighter/dist/esm/styles/hljs"
 interface Props {
   node: {
     language: string;
-    code: unknown;
+    code: string;
   };
 }
 
@@ -20,8 +20,9 @@ const CodeBlock: FC<Props> = ({ node }) => {
         </div>
         <p className="text-md sm:text-lg self-start text-gray-50">{node.language}</p>
       </div>
-      <div className="text-md sm:text-lg">
-        <SyntaxHighlighter showLineNumbers={true} wrapLines={true} language={node.language} style={style}>
+
+      <div className="text-md sm:text-lg font-mono font-light">
+        <SyntaxHighlighter wrapLines showLineNumbers language={node.language} style={style}>
           {node.code}
         </SyntaxHighlighter>
       </div>
