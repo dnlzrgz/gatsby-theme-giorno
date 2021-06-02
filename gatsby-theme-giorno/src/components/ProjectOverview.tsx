@@ -14,9 +14,7 @@ interface Props {
       current: string;
     };
     image: {
-      asset: {
-        gatsbyImageData: IGatsbyImageData;
-      };
+      asset: IGatsbyImageData;
     };
   };
 }
@@ -31,7 +29,7 @@ const ProjectOverview: FC<Props> = ({ project }) => {
     <article className="mb-6">
       <header>
         <div className="h-auto max-w-3xl relative">
-          <ImageBlock image={image.asset.gatsbyImageData} altText={name} />
+          <ImageBlock asset={image.asset} altText={name} />
         </div>
         <div className="mt-2">
           {enable ? (

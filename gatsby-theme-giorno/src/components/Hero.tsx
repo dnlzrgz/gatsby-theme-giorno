@@ -31,7 +31,7 @@ const Hero: FC<Props> = ({ module }) => {
     <section className="grid grid-rows-1 grid-cols-1 items-center">
       <header className={`${whiteText ? "text-white" : "text-gray-900"} z-10`} style={{ gridArea: "1/1" }}>
         <div
-          className={`px-8 md:px-32 flex flex-col ${
+          className={`px-8 sm:px-16 lg:px-32 flex flex-col ${
             textAlignment === "center"
               ? "text-center items-center"
               : textAlignment === "left"

@@ -3,11 +3,7 @@ import { IFormInput, IFormTextarea, IFormSubmit } from "../../types";
 
 import formBuilder from "../utils/formBuilder";
 import Section from "./Section";
-import SectionHeader from "./SectionHeader";
-import SectionTitle from "./SectionTitle";
-import SectionDescription from "./SectionDescription";
 import FormSubmit from "./FormSubmit";
-import PlainContent from "./PlainContent";
 
 export interface Props {
   module: {
@@ -28,31 +24,23 @@ const FormSection: FC<Props> = ({ module }) => {
   };
 
   return (
-    <Section>
-      <SectionHeader>
-        <SectionTitle>{title}</SectionTitle>
-        <SectionDescription>
-          <PlainContent content={description} />
-        </SectionDescription>
-      </SectionHeader>
-      <main>
-        <form
-          name={name}
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={onSubmit}
-          className="flex justify-center mt-9"
-        >
-          <div className="flex flex-col flex-grow gap-6 md:gap-9 max-w-xl">
-            <input type="hidden" name="bot-field" />
+    <Section title={title} description={description} fullWidth>
+      <form
+        name={name}
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={onSubmit}
+        className="flex justify-center mt-9"
+      >
+        <div className="flex flex-col flex-grow gap-6 md:gap-9 max-w-xl">
+          <input type="hidden" name="bot-field" />
 
-            {formBuilder(inputs)}
+          {formBuilder(inputs)}
 
-            <FormSubmit onSubmit={onSubmit}>{submit.text}</FormSubmit>
-          </div>
-        </form>
-      </main>
+          <FormSubmit onSubmit={onSubmit}>{submit.text}</FormSubmit>
+        </div>
+      </form>
     </Section>
   );
 };

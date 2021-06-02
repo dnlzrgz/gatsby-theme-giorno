@@ -1,12 +1,8 @@
 import React, { FC } from "react";
 
 import Section from "./Section";
-import SectionHeader from "./SectionHeader";
-import SectionTitle from "./SectionTitle";
-import SectionDescription from "./SectionDescription";
-import SectionLink from "./SectionLink";
+import GridSectionContentWrapper from "./GridSectionContentWrapper";
 import GridItem from "./GridItem";
-import PlainContent from "./PlainContent";
 
 interface Props {
   module: {
@@ -29,23 +25,12 @@ const GridSection: FC<Props> = ({ module }) => {
   const { title, description, items, url } = module;
 
   return (
-    <Section>
-      <div className="grid grid-cols-1 xl:grid-cols-2 lg:gap-24">
-        <SectionHeader>
-          <SectionTitle>{title}</SectionTitle>
-          <SectionDescription>
-            <PlainContent content={description} />
-          </SectionDescription>
-          <SectionLink url={url} />
-        </SectionHeader>
-        <main className="flex items-center justify-center sm:py-12 lg:py-0">
-          <div className="grid grid-cols-1 mt-12 md:mt-0 sm:grid-cols-2 gap-12">
-            {items.map((item) => (
-              <GridItem key={item._key} title={item.title} description={item.description} />
-            ))}
-          </div>
-        </main>
-      </div>
+    <Section title={title} description={description} url={url}>
+      <GridSectionContentWrapper>
+        {items.map((item) => (
+          <GridItem key={item._key} title={item.title} description={item.description} />
+        ))}
+      </GridSectionContentWrapper>
     </Section>
   );
 };

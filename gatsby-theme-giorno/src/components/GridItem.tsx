@@ -9,7 +9,7 @@ interface Props {
 
 const GridItem: FC<Props> = ({ title, description }) => {
   return (
-    <div className="md:px-6 flex flex-col">
+    <div>
       <h3 className="text-2xl sm:text-3xl font-serif font-semibold mb-3">{title}</h3>
       <div className="text-xl">
         <PlainContent content={description} />

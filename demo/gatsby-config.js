@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Giorno Theme",
+        name: "Giorno Demo",
         short_name: "Giorno",
         icon: "src/images/favicon.png",
         start_url: "/",

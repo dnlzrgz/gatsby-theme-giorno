@@ -17,6 +17,13 @@ export const query = graphql`
             text
           }
         }
+        url {
+          _type
+          external
+          title
+          url
+          _key
+        }
         rawContent: _rawContent
         content {
           children {
