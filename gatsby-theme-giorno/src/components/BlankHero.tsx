@@ -22,10 +22,10 @@ const BlankHero: FC<Props> = ({ module }) => {
   const { title, description, textAlignment, cta } = module;
 
   return (
-    <section className="grid grid-rows-1 grid-cols-1 items-center py-32 sm:py-40">
+    <section className="my-48 px-8 sm:px-16 lg:px-32">
       <header className="text-gray-900 z-10" style={{ gridArea: "1/1" }}>
         <div
-          className={`px-8 md:px-32 flex flex-col ${
+          className={`flex flex-col ${
             textAlignment === "center"
               ? "text-center items-center"
               : textAlignment === "left"
