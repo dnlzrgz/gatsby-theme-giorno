@@ -1,13 +1,14 @@
 import React, { FC } from "react";
 import { Link } from "gatsby";
 
-import ContentBlock from "./ContentBlock";
+import PlainContent from "./PlainContent";
+import ReadMoreLink from "./ReadMoreLink";
 
 interface Props {
   post: {
     title: string;
     publishedAt: string;
-    _rawContent: unknown[];
+    preview: unknown;
     slug: {
       current: string;
     };
@@ -21,24 +22,26 @@ interface Props {
 }
 
 const PostCard: FC<Props> = ({ post }) => {
-  if (!post._rawContent.length) return null;
+  const { publishedAt, title, preview, slug } = post;
+  const postUrl = `/blog/${slug.current}`;
+  const date = new Intl.DateTimeFormat("en", { dateStyle: "long" }).format(new Date(publishedAt));
 
   return (
-    <article className="md:max-w-5xl border shadow flex flex-col gap-6 py-6 px-9">
-      <header>
-        <Link to={`/blog/${post.slug.current}`}>
-          <h1 className="text-3xl font-semibold">{post.title}</h1>
+    <li className="py-12">
+      <article className="text-text dark:text-invert-text space-y-2">
+        <dd className="text-lg leading-6 font-medium mb-1">{date}</dd>
+        <Link to={postUrl}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 font-semibold font-serif">{title}</h2>
         </Link>
-      </header>
-      <main>
-        <ContentBlock content={post._rawContent[0]} />
-      </main>
-      <footer>
-        <p>
-          Written by <Link to={`/authors/${post.author.slug.current}`}>{post.author.name}</Link>, {post.publishedAt}.
-        </p>
-      </footer>
-    </article>
+
+        <main className="text-xl sm:text-2sl max-w-prose">
+          <PlainContent content={preview} />
+        </main>
+        <footer>
+          <ReadMoreLink url={postUrl} />
+        </footer>
+      </article>
+    </li>
   );
 };
 
