@@ -13,7 +13,7 @@ const FooterSitemap: FC = () => {
     blog: { enable },
   } = useSanityConfig();
 
-  if (!pages.length) return null;
+  if (!pages.length && !enable) return null;
   return (
     <FooterSection>
       <header>

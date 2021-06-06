@@ -16,7 +16,12 @@ const Footer: FC = () => {
   const contactOptions = useSanityContactOptions();
 
   return (
-    <footer className="text-invert-text bg-footer flex flex-col sm:grid sm:grid-col-3 items-start gap-9 py-16 px-6 md:px-12">
+    <footer
+      className={`text-invert-text bg-footer flex justify-items-center flex-col sm:grid ${
+        sitemap ? "sm:grid-col-3" : "sm:grid-col-2"
+      } gap-9 py-16 px-6 md:px-12`}
+      style={{ gridTemplateColumns: `repeat(${sitemap ? 3 : 2}, 1fr)` }}
+    >
       {links?.length !== 0 ? <FooterSocialLinks links={links} /> : null}
       {contactOptions?.title ? <FooterContact details={contactOptions} /> : null}
       {sitemap ? <FooterSitemap /> : null}
