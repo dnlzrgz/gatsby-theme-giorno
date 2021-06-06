@@ -18,7 +18,7 @@ const Header: FC = () => {
 
   if (!navbar) return null;
   return (
-    <header className="w-full bg-white dark:bg-invert-background shadow fixed z-50">
+    <header>
       <Nav>
         <NavHomeLink clickHandler={clinkHandler}>{title}</NavHomeLink>
         <NavMenuButton

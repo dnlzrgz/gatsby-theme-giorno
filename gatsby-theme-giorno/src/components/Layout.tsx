@@ -5,11 +5,11 @@ import Footer from "./Footer";
 
 const Layout: FC = ({ children }) => {
   return (
-    <>
+    <div className="text-text dark:text-invert-text bg-background dark:bg-invert-background">
       <Header />
-      <main className="text-text dark:text-invert-text bg-background dark:bg-invert-background">{children}</main>
+      <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 
