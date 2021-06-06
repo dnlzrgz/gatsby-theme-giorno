@@ -1,9 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 import { graphql } from "gatsby";
 
 import pageBuilder from "../utils/pageBuilder";
 
-const Page = ({ data }) => {
+interface Props {
+  data: {
+    page: {
+      pageBuilder: unknown;
+    };
+  };
+}
+
+const Page: FC<Props> = ({ data }) => {
   return <>{pageBuilder(data.page.pageBuilder)}</>;
 };
 
