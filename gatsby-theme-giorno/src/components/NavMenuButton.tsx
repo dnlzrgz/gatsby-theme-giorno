@@ -9,7 +9,7 @@ interface Props {
 
 const NavMenuButton: FC<Props> = ({ open, handleClick }) => {
   return (
-    <button type="button" className="md:hidden text-text dark:text-invert-text p-1" onClick={handleClick}>
+    <button type="button" className="text-text dark:text-invert-text p-3" onClick={handleClick}>
       {!open ? <MenuIcon /> : <CloseMenuIcon />}
     </button>
   );

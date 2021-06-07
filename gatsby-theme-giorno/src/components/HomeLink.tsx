@@ -5,12 +5,12 @@ interface Props {
   clickHandler: () => void;
 }
 
-const NavHomeLink: FC<Props> = ({ children, clickHandler }) => {
+const HomeLink: FC<Props> = ({ children, clickHandler }) => {
   return (
     <Link to="/" onClick={clickHandler}>
-      <h1 className="text-2xl text-text dark:text-invert-text font-serif">{children}</h1>
+      <h1 className="text-2xl sm:text-4xl text-text dark:text-invert-text font-serif">{children}</h1>
     </Link>
   );
 };
 
-export default NavHomeLink;
+export default HomeLink;

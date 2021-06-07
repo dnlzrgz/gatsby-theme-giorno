@@ -26,16 +26,18 @@ const FooterSitemap: FC = () => {
         <Link key={"home"} to="/">
           Home
         </Link>
-        {enable ? (
-          <Link key={"blog"} to="/blog">
-            Blog
-          </Link>
-        ) : null}
+
         {pages.map((page) => (
           <Link key={page.id} to={`/${page.slug.current}`}>
             {page.title}
           </Link>
         ))}
+
+        {enable ? (
+          <Link key={"blog"} to="/blog">
+            Blog
+          </Link>
+        ) : null}
       </FooterSectionMain>
     </FooterSection>
   );

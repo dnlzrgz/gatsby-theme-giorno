@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 
 const MenuListItem: FC = ({ children }) => {
-  return <li className="text-text dark:text-invert-text hover:text-primary py-3 md:py-0">{children}</li>;
+  return (
+    <li className="text-xl sm:text-2xl inline-block underline transitiona-all hover:no-underline py-4">{children}</li>
+  );
 };
 
 export default MenuListItem;

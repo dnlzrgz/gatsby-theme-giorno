@@ -16,15 +16,7 @@ const NavMenuList: FC<Props> = ({ clickHandler }) => {
   } = useSanityConfig();
 
   return (
-    <ul className="grid grid-flow-row md:grid-flow-col md:py-0 md:gap-12 pb-6 md:pb-0">
-      {enable ? (
-        <MenuListItem>
-          <Link key="blog" to="/blog" onClick={clickHandler}>
-            Blog
-          </Link>
-        </MenuListItem>
-      ) : null}
-
+    <ul className="flex flex-col items-center w-full p-8 relative top-0 left-0">
       {pages.map((page) => {
         return (
           <MenuListItem key={page.slug.current}>
@@ -34,6 +26,14 @@ const NavMenuList: FC<Props> = ({ clickHandler }) => {
           </MenuListItem>
         );
       })}
+
+      {enable ? (
+        <MenuListItem>
+          <Link key="blog" to="/blog" onClick={clickHandler}>
+            Blog
+          </Link>
+        </MenuListItem>
+      ) : null}
     </ul>
   );
 };
