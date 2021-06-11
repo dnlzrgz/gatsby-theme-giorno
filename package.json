@@ -3,8 +3,9 @@
   "scripts": {
     "clean": "yarn workspace demo clean",
     "start": "yarn workspace demo start",
+    "fresh-start": "yarn clean && yarn start",
     "build": "yarn workspace demo build",
-    "serve": "yarn workspace demo clean && yarn workspace demo build && yarn workspace demo serve",
+    "serve": "yarn clean && yarn build && yarn workspace demo serve",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "yarn lint --fix",
     "lint:ts": "tsc"
