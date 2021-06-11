@@ -24,9 +24,7 @@ const CodeSection: FC<Props> = ({ module }) => {
 
   return (
     <Section title={title} description={description} url={url}>
-      <div className="flex items-center justify-center mt-8 xl:mt-0 py-12 sm:py-0">
-        <CodeBlock node={code} />
-      </div>
+      <CodeBlock node={code} />
     </Section>
   );
 };
