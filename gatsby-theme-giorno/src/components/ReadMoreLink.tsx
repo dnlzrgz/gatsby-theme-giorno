@@ -6,7 +6,7 @@ interface Props {
 }
 
 const ReadMoreLink: FC<Props> = ({ url }) => (
-  <Link to={url} className="text-lg text-primary hover:text-darker-primary">
+  <Link to={url} className="text-xl inline-block underline transition-all hover:no-underline outline-none mt-4">
     Read more →
   </Link>
 );
