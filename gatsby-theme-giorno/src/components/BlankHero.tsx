@@ -23,7 +23,7 @@ const BlankHero: FC<Props> = ({ module }) => {
 
   return (
     <section className="my-48 px-8 sm:px-16 lg:px-32 bg-background dark:bg-invert-background">
-      <header className="text-text dark:text-invert-text z-10" style={{ gridArea: "1/1" }}>
+      <div className="text-text dark:text-invert-text z-10" style={{ gridArea: "1/1" }}>
         <div
           className={`flex flex-col ${
             textAlignment === "center"
@@ -41,7 +41,7 @@ const BlankHero: FC<Props> = ({ module }) => {
             {cta && cta.title && cta.url ? <CTA title={cta.title} url={cta.url} external={cta.external} /> : null}
           </div>
         </div>
-      </header>
+      </div>
     </section>
   );
 };

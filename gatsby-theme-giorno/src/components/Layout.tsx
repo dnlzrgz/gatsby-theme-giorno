@@ -10,7 +10,9 @@ const Layout: FC = ({ children }) => {
   } = useSanityConfig();
 
   return (
-    <div className={`text-text dark:text-invert-text bg-background dark:bg-invert-background ${navbar ? "pt-20" : ""}`}>
+    <div
+      className={`text-text dark:text-invert-text bg-background dark:bg-invert-background ${navbar ? "md:pt-20" : ""}`}
+    >
       <Header />
       <main>{children}</main>
       <Footer />
