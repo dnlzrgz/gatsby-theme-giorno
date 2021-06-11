@@ -1,12 +1,13 @@
+/* eslint-disable react/display-name */
 import React, { FC } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 
 import CodeBlock from "./CodeBlock";
 import ImageBlock from "./ImageBlock";
+import CodepenEmbed from "./CodepenEmbed";
 
 const serializers = {
   types: {
-    // eslint-disable-next-line react/display-name
     block: (props) => {
       switch (props.node.style) {
         case "h1":
@@ -21,8 +22,16 @@ const serializers = {
           return null;
       }
     },
-    code: CodeBlock,
-    image: ImageBlock,
+    codepen: (props) => {
+      return <CodepenEmbed url={props.node.url} />;
+    },
+    code: (props) => {
+      return <CodeBlock node={props.node} />;
+    },
+    image: (props) => {
+      console.log({ ...props });
+      return <ImageBlock asset={props.node.asset} altText="" />;
+    },
   },
 };
 
